@@ -1,7 +1,13 @@
 :root {
     --transition-duration: 0.3s;
 
-    --color-bg-body: #e6e6e6;
-    --color-text-body: #36362c;
+    --color-dark: #101319;
+    --color-gray-700: #1F242E;
+    --color-gray-500: #272D3B;
+    --color-text-body: #E5EDFF;
+    --color-secondary: #92A1BF;
+    --color-purple: #725DF8;
+    --color-dark-purple: #282540;
+    --color-green: #58E2B0;
   }
   
