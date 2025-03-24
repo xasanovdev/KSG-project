@@ -1,0 +1,53 @@
+@import url('./fonts.css');
+@import url('./variables.css');
+@import url('./reset.css');
+
+
+/* GLOBAL */
+body {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 24px;
+    margin: 0;
+    font-family: "Manrope", "Arial", sans-serif;
+    font-size: 2rem;
+    line-height: normal;
+    letter-spacing: -0.03331rem;
+    background-color: var(--color-bg-body);
+    color: var(--color-text-body);
+    transition-duration: var(--transition-duration);
+    transition-timing-function: ease;
+    transition-property: background-color, color;
+  }
+  
+  img {
+    height: auto;
+  }
+  
+  *:focus {
+    outline: 2px dashed var(--color-outline);
+    outline-offset: 3px;
+  }
+  
+  /* VISUALLY-HIDDEN */
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+  
+  
+  /* CONTAINER */
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-left: auto;
+    margin-right: auto;
+  }
