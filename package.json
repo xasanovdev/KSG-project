@@ -1,18 +1,24 @@
 {
-  "name": "nuxt-app",
-  "private": true,
-  "type": "module",
-  "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
-  },
-  "dependencies": {
-    "nuxt": "^3.16.1",
-    "nuxt-lucide-icons": "1.0.5",
-    "vue": "^3.5.13",
-    "vue-router": "^4.5.0"
-  }
+    "name": "nuxt-app",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "build": "nuxt build",
+        "dev": "nuxt dev",
+        "generate": "nuxt generate",
+        "preview": "nuxt preview",
+        "postinstall": "nuxt prepare"
+    },
+    "dependencies": {
+        "@ivanv/vue-collapse-transition": "^1.0.2",
+        "@pinia/nuxt": "0.10.1",
+        "fs": "^0.0.1-security",
+        "nuxt": "^3.16.1",
+        "nuxt-lucide-icons": "1.0.5",
+        "path": "^0.12.7",
+        "pinia": "^3.0.1",
+        "prettier": "^3.5.3",
+        "vue": "^3.5.13",
+        "vue-router": "^4.5.0"
+    }
 }

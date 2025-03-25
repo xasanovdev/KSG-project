@@ -1,14 +1,14 @@
 @import url('./fonts.css');
 @import url('./variables.css');
 @import url('./reset.css');
-
+@import url('./animation.css');
 
 /* GLOBAL */
 body {
     display: flex;
     flex-direction: column;
     margin-top: 2rem;
-    font-family: "Manrope", "Arial", sans-serif;
+    font-family: 'Manrope', 'Arial', sans-serif;
     font-size: 1rem;
     line-height: normal;
     letter-spacing: -0.03331rem;
@@ -17,19 +17,19 @@ body {
     transition-duration: var(--transition-duration);
     transition-timing-function: ease;
     transition-property: background-color, color;
-  }
-  
-  img {
+}
+
+img {
     height: auto;
-  }
-  
-  *:focus {
+}
+
+*:focus {
     outline: 2px dashed var(--color-outline);
     outline-offset: 3px;
-  }
-  
-  /* VISUALLY-HIDDEN */
-  .visually-hidden {
+}
+
+/* VISUALLY-HIDDEN */
+.visually-hidden {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -38,15 +38,14 @@ body {
     padding: 0;
     clip: rect(0 0 0 0);
     overflow: hidden;
-  }
-  
-  
-  /* CONTAINER */
-  .container {
+}
+
+/* CONTAINER */
+.container {
     width: 100%;
     max-width: 1200px;
     padding-left: 50px;
     padding-right: 50px;
     margin-left: auto;
     margin-right: auto;
-  }
+}

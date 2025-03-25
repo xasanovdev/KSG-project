@@ -5,62 +5,79 @@
 
 html {
     box-sizing: border-box;
-  }
-  
-  *, *::before, *::after {
+}
+
+*,
+*::before,
+*::after {
     box-sizing: inherit;
-  }
-  
-  html:focus-within {
+}
+
+html:focus-within {
     scroll-behavior: smooth;
-  }
-  
-  html, body {
+}
+
+html,
+body {
     height: 100%;
-  }
-  
-  * {
+}
+
+* {
     margin: 0;
-  }
-  
-  body {
+}
+
+body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
-  }
-  
-  ul[role='list'],
-  ol[role='list'] {
+}
+
+ul[role='list'],
+ol[role='list'] {
     list-style: none;
-  }
-  
-  a:not([class]) {
+}
+
+a:not([class]) {
     text-decoration-skip-ink: auto;
-  }
-  
-  img, picture, video, canvas, svg {
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
     display: block;
     max-width: 100%;
-  }
-  
-  input, button, textarea, select {
+}
+
+input,
+button,
+textarea,
+select {
     font: inherit;
-  }
-  
-  p, h1, h2, h3, h4, h5, h6 {
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     overflow-wrap: break-word;
-  }
-  
-  #root, #__next {
+}
+
+#root,
+#__next {
     isolation: isolate;
-  }
-  
-  @media (prefers-reduced-motion: reduce) {
+}
+
+@media (prefers-reduced-motion: reduce) {
     *,
     *::before,
     *::after {
-      animation-duration: 0.01ms !important;
-      animation-iteration-count: 1 !important;
-      transition-duration: 0.01ms !important;
-      scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
     }
-  }
+}

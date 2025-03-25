@@ -2,12 +2,12 @@
     --transition-duration: 0.3s;
 
     --color-dark: #101319;
-    --color-gray-700: #1F242E;
-    --color-gray-500: #272D3B;
-    --color-text-body: #E5EDFF;
-    --color-secondary: #92A1BF;
-    --color-purple: #725DF8;
+    --color-gray-900: #161a23;
+    --color-gray-700: #1f242e;
+    --color-gray-500: #272d3b;
+    --color-text-body: #e5edff;
+    --color-secondary: #92a1bf;
+    --color-purple: #725df8;
     --color-dark-purple: #282540;
-    --color-green: #58E2B0;
-  }
-  
+    --color-green: #58e2b0;
+}
