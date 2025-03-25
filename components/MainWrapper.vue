@@ -1,3 +1,145 @@
+<template>
+    <main class="container">
+        <Header @action="actions" :count="categories?.length" />
+
+        <section class="categories__list">
+            <div class="categories__tbody">
+                <div
+                    class="category-container"
+                    v-for="(category, index) in categories"
+                    :key="category.id"
+                >
+                    <ul class="categories__row">
+                        <li class="categories__row-item">
+                            <LucideGripVertical :size="24" />
+                        </li>
+
+                        <li class="categories__row-item">
+                            <span class="categories__row-head">&#8470;</span>
+                            <span class="categories__row-label">{{
+                                index + 1
+                            }}</span>
+                        </li>
+                        <li class="categories__row-item">
+                            <span class="categories__row-head">Name</span>
+                            <span class="categories__row-label">
+                                <Transition name="fade" mode="out-in">
+                                    <LucideFolder
+                                        v-if="!category.hasOpenedSubCategories"
+                                        class="folder-icon"
+                                    />
+                                    <LucideFolderOpen v-else />
+                                </Transition>
+                                {{ category.name }}
+                            </span>
+                        </li>
+                        <li class="categories__row-item">
+                            <span class="categories__row-head">Order</span>
+                            <span class="categories__row-label">{{
+                                category.order
+                            }}</span>
+                        </li>
+                        <li class="categories__row-item">
+                            <span class="categories__row-head"
+                                >Sub categories</span
+                            >
+                            <span class="categories__row-label">{{
+                                formatList(category.sub_categories)
+                            }}</span>
+                        </li>
+                        <li class="categories__row-item">
+                            <span class="categories__row-count">{{
+                                category.sub_categories?.length
+                            }}</span>
+                        </li>
+
+                        <li class="categories__row-item actions">
+                            <CommonButton
+                                @click="
+                                    toggleSubCategories(String(category.id))
+                                "
+                                variant="primary"
+                                size="sm"
+                                square
+                            >
+                                <LucideChevronDown
+                                    :class="{
+                                        'rotate-180':
+                                            category.hasOpenedSubCategories,
+                                    }"
+                                    :size="16"
+                                />
+                            </CommonButton>
+                            <CommonButton
+                                variant="dark-purple"
+                                size="sm"
+                                square
+                            >
+                                <LucideEllipsis :size="16" />
+                            </CommonButton>
+                        </li>
+                    </ul>
+
+                    <!-- Subcategories -->
+                    <Transition name="slide-fade">
+                        <section
+                            v-if="category.hasOpenedSubCategories"
+                            class="subcategories__list"
+                        >
+                            <ul
+                                class="subcategories__row"
+                                v-for="(
+                                    sub_category, sub_index
+                                ) in category.sub_categories"
+                                :key="sub_category.id"
+                            >
+                                <li class="categories__row-item">
+                                    <LucideGripVertical :size="24" />
+                                </li>
+                                <li class="categories__row-item">
+                                    <span class="categories__row-head"
+                                        >&#8470;</span
+                                    >
+                                    <span class="categories__row-label"
+                                        >{{ index + 1 }}.
+                                        {{ sub_index + 1 }}</span
+                                    >
+                                </li>
+                                <li class="categories__row-item">
+                                    <span class="categories__row-head"
+                                        >Name</span
+                                    >
+                                    <span class="categories__row-label">
+                                        <LucideFile />
+                                        {{ sub_category.name }}
+                                    </span>
+                                </li>
+                                <li class="categories__row-item">
+                                    <span class="categories__row-head"
+                                        >Order</span
+                                    >
+                                    <span class="categories__row-label">{{
+                                        sub_category.order
+                                    }}</span>
+                                </li>
+                                <li class="categories__row-item actions">
+                                    <CommonButton
+                                        variant="dark-purple"
+                                        size="sm"
+                                        square
+                                    >
+                                        <LucideEllipsis :size="16" />
+                                    </CommonButton>
+                                </li>
+                            </ul>
+                        </section>
+                    </Transition>
+                </div>
+            </div>
+        </section>
+    </main>
+</template>
+
 <script setup lang="ts">
 import { useCategoriesStore } from '~/store/categories';
 import type { Category } from '~/types/categories';
@@ -8,125 +150,43 @@ const categoriesStore = useCategoriesStore();
 
 const actions = (action: HistoryActionEvents) => {};
 
-const categories = ref<Category[]>([])
+const categories = ref<Category[]>([]);
 
 const toggleSubCategories = (categoryId: string) => {
-    const categoryIndex = categories.value.findIndex((item) => String(item.id) === categoryId)
+    const categoryIndex = categories.value.findIndex(
+        (item) => String(item.id) === categoryId
+    );
 
-    if(categoryIndex !== -1){
-        categories.value[categoryIndex].hasOpenedSubCategories = !categories.value[categoryIndex].hasOpenedSubCategories
+    if (categoryIndex !== -1) {
+        categories.value[categoryIndex].hasOpenedSubCategories =
+            !categories.value[categoryIndex].hasOpenedSubCategories;
     }
 };
 
 onMounted(() => {
     categoriesStore.fetchCategories().finally(() => {
         categories.value = categoriesStore.categories.map((category) => ({
-        ...category,
-        hasOpenedSubCategories: false,
-    }))
-    })
+            ...category,
+            hasOpenedSubCategories: false,
+        }));
+    });
 });
 </script>
 
-<template>
-    <main class="container">
-        <Header @action="actions" :count="categories?.length" />
-
-        <section class="categories__list">
-            <div class="categories__tbody">
-                <ul
-                    class="categories__row"
-                    v-for="(category, index) in categories"
-                    :key="category.id"
-                >
-                    <li class="categories__row-item">
-                        <span class="categories__row-head">&#8470;</span>
-                        <span class="categories__row-label">{{
-                            index + 1
-                        }}</span>
-                    </li>
-                    <li class="categories__row-item">
-                        <span class="categories__row-head">Name</span>
-                        <span class="categories__row-label">
-                            <Transition name="fade" mode="out-in">
-                                <LucideFolder
-                                v-if="!category.hasOpenedSubCategories"
-                                class="folder-icon"
-                                />
-                                <LucideFolderOpen v-else />
-                            </Transition>
-                            {{ category.name }}
-                        </span>
-                    </li>
-                    <li class="categories__row-item">
-                        <span class="categories__row-head">Order</span>
-                        <span class="categories__row-label">{{
-                            category.order
-                        }}</span>
-                    </li>
-                    <li class="categories__row-item">
-                        <span class="categories__row-head">Sub categories</span>
-                        <span class="categories__row-label">{{
-                            formatList(category.sub_categories)
-                        }}</span>
-                    </li>
-                    <li class="categories__row-item">
-                        <span class="categories__row-count">{{
-                            category.sub_categories?.length
-                        }}</span>
-                    </li>
-
-                    <li class="categories__row-item actions">
-                        <CommonButton
-                            @click="toggleSubCategories(String(category.id))"
-                            variant="primary"
-                            size="sm"
-                            square
-                        >
-                            <LucideChevronDown
-                                :class="{
-                                    'rotate-180':
-                                        category.hasOpenedSubCategories,
-                                }"
-                                :size="16"
-                            />
-                        </CommonButton>
-                        <CommonButton variant="dark-purple" size="sm" square>
-                            <LucideEllipsis :size="16" />
-                        </CommonButton>
-                    </li>
-
-                    <!-- Subcategories -->
-                    <Transition name="slide-fade">
-                        <ul v-if="category.hasOpenedSubCategories" class="subcategories__list">
-                            <li v-for="subCategory in category.sub_categories" :key="subCategory.id" class="subcategories__item">
-                                {{ subCategory.name }}
-                            </li>
-                        </ul>
-                    </Transition>
-
-                    <!-- Sample -->
-                    <!-- <li class="categories__row-item">
-                        <span class="categories__row-head">Order</span>    
-                        <span class="categories__row-label">{{ category.order }}</span>
-                    </li> -->
-                </ul>
-            </div>
-        </section>
-    </main>
-</template>
-
 <style lang="css" scoped>
-.subcategories__list {
-    margin-top: 10px;
-    padding-left: 20px;
-    border-left: 2px solid var(--color-secondary);
+.category-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 6px;
+    background-color: var(--color-gray-900);
 }
 
-.subcategories__item {
-    padding: 5px 0;
-    font-size: 14px;
-    color: var(--color-gray-300);
+.subcategories__list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
 }
 
 .categories__list {
@@ -142,13 +202,24 @@ onMounted(() => {
 
 .categories__row {
     display: grid;
-    grid-template-columns: 40px 200px 100px 1fr 40px 72px;
+    grid-template-columns: 32px 40px 200px 100px 1fr 40px 72px;
     gap: 16px;
-    background-color: var(--color-gray-900);
+    padding: 12px;
+    align-items: center;
+    transition: background 0.2s ease-in-out;
+    width: 100%;
+}
+
+.subcategories__row {
+    display: grid;
+    grid-template-columns: 32px 40px 200px 100px 1fr 72px;
+    gap: 16px;
+    background-color: var(--color-gray-800);
     padding: 12px;
     border-radius: 6px;
     align-items: center;
     transition: background 0.2s ease-in-out;
+    width: 100%;
 }
 
 .categories__row-item {
