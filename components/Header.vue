@@ -15,13 +15,13 @@ const emits = defineEmits<Emits>();
 
 defineProps<Props>();
 
-const showModal = ref(false)
+const showModal = ref(false);
 
-const categoriesStore = useCategoriesStore()
+const categoriesStore = useCategoriesStore();
 
 const handleSave = (category: Category) => {
-    categoriesStore.addCategory(category)
-}
+    categoriesStore.addCategory(category);
+};
 </script>
 
 <template>
@@ -50,16 +50,11 @@ const handleSave = (category: Category) => {
             >
                 <LucideArrowRight :size="16" />
             </CommonButton>
-            <CommonButton
-                variant="primary"
-                size="sm"
-                @click="showModal = true"
-            >
+            <CommonButton variant="primary" size="sm" @click="showModal = true">
                 <LucidePlus :size="16" />
                 Add
             </CommonButton>
         </div>
-
     </header>
 
     <ModalEdit

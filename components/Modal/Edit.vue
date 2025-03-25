@@ -40,11 +40,15 @@ const removeSubcategory = (index: number) => {
     formData.value.sub_categories.splice(index, 1);
 };
 
-watch(() => props.category, () => {
-    formData.value = {
-        ...props.category,
-    }
-}, {deep: true})
+watch(
+    () => props.category,
+    () => {
+        formData.value = {
+            ...props.category,
+        };
+    },
+    { deep: true }
+);
 </script>
 
 <template>

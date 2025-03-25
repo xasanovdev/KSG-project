@@ -5,9 +5,9 @@
         <section class="categories__list">
             <div class="categories__tbody">
                 <div
-                    class="category-container"
                     v-for="(category, index) in categories"
                     :key="category.id"
+                    class="category-container"
                     draggable="true"
                     @dragstart="onDragStart($event, category.id, 'category')"
                     @dragover.prevent
@@ -18,205 +18,35 @@
                             draggedItem.type === 'subcategory',
                     }"
                 >
-                    <ul
-                        class="categories__row"
-                        :class="{
-                            dragged: draggedItem?.categoryId === category.id,
-                        }"
-                    >
-                        <li class="categories__row-item drag-handle">
-                            <LucideGripVertical
-                                :size="24"
-                                draggable="true"
-                                @dragstart="
-                                    onDragStart($event, index, 'category')
-                                "
-                            />
-                        </li>
+                    <CategoryRow
+                        :category="category"
+                        :index="index"
+                        :dragged-item="draggedItem"
+                        @dragstart="onDragStart"
+                        @toggle="toggleSubCategories"
+                        @edit="handleEdit"
+                        @remove="handleRemove"
+                    />
 
-                        <li class="categories__row-item">
-                            <span class="categories__row-head">&#8470;</span>
-                            <span class="categories__row-label">{{
-                                index + 1
-                            }}</span>
-                        </li>
-                        <li class="categories__row-item">
-                            <span class="categories__row-head">Name</span>
-                            <span class="categories__row-label">
-                                <Transition name="fade" mode="out-in">
-                                    <LucideFolder
-                                        v-if="!category.hasOpenedSubCategories"
-                                        class="folder-icon"
-                                    />
-                                    <LucideFolderOpen v-else />
-                                </Transition>
-                                {{ category.name }}
-                            </span>
-                        </li>
-                        <li class="categories__row-item">
-                            <span class="categories__row-head">Order</span>
-                            <span class="categories__row-label">{{
-                                category.order
-                            }}</span>
-                        </li>
-                        <li class="categories__row-item">
-                            <span class="categories__row-head"
-                                >Sub categories</span
-                            >
-                            <span class="categories__row-label">{{
-                                formatList(category.sub_categories)
-                            }}</span>
-                        </li>
-                        <li class="categories__row-item">
-                            <span class="categories__row-count">{{
-                                category.sub_categories?.length
-                            }}</span>
-                        </li>
-
-                        <li class="categories__row-item actions">
-                            <CommonButton
-                                @click="
-                                    toggleSubCategories(String(category.id))
-                                "
-                                variant="primary"
-                                size="sm"
-                                square
-                            >
-                                <LucideChevronDown
-                                    :class="{
-                                        'rotate-180':
-                                            category.hasOpenedSubCategories,
-                                    }"
-                                    :size="16"
-                                />
-                            </CommonButton>
-
-                            <DropDown
-                                :actions="[
-                                    {
-                                        label: 'Edit',
-                                        icon: LucideEdit,
-                                        handler: () => handleEdit(category),
-                                    },
-                                    {
-                                        label: 'Remove',
-                                        icon: LucideTrash,
-                                        handler: () =>
-                                            handleRemove(String(category.id)),
-                                    },
-                                ]"
-                            >
-                                <CommonButton
-                                    variant="dark-purple"
-                                    size="sm"
-                                    square
-                                >
-                                    <LucideEllipsis :size="16" />
-                                </CommonButton>
-                            </DropDown>
-                        </li>
-                    </ul>
-
-                    <!-- Subcategories -->
                     <Transition name="slide-fade">
                         <section
                             v-if="category.hasOpenedSubCategories"
                             class="subcategories__list"
                         >
-                            <ul
-                                class="subcategories__row"
+                            <SubCategoryRow
                                 v-for="(
                                     sub_category, sub_index
                                 ) in category.sub_categories"
                                 :key="sub_category.id"
-                                draggable="true"
-                                @dragstart.stop="
-                                    onDragStart(
-                                        $event,
-                                        category.id,
-                                        'subcategory',
-                                        sub_category.id
-                                    )
-                                "
-                                @dragover.prevent
-                                @drop="
-                                    onDrop(
-                                        $event,
-                                        category.id,
-                                        'subcategory',
-                                        sub_category.id
-                                    )
-                                "
-                            >
-                                <li class="categories__row-item drag-handle">
-                                    <LucideGripVertical
-                                        :size="24"
-                                        draggable="true"
-                                        @dragstart.stop="
-                                            onDragStart(
-                                                $event,
-                                                category.id,
-                                                'subcategory',
-                                                sub_category.id
-                                            )
-                                        "
-                                    />
-                                </li>
-                                <li class="categories__row-item">
-                                    <span class="categories__row-head"
-                                        >&#8470;</span
-                                    >
-                                    <span class="categories__row-label"
-                                        >{{ index + 1 }}.
-                                        {{ sub_index + 1 }}</span
-                                    >
-                                </li>
-                                <li class="categories__row-item">
-                                    <span class="categories__row-head"
-                                        >Name</span
-                                    >
-                                    <span class="categories__row-label">
-                                        <LucideFile />
-                                        {{ sub_category.name }}
-                                    </span>
-                                </li>
-                                <li class="categories__row-item">
-                                    <span class="categories__row-head"
-                                        >Order</span
-                                    >
-                                    <span class="categories__row-label">{{
-                                        sub_category.order
-                                    }}</span>
-                                </li>
-                                <li class="categories__row-item actions">
-                                    <DropDown
-                                        :actions="[
-                                            {
-                                                label: 'Edit',
-                                                icon: LucideEdit,
-                                                handler: () => handleEdit(category),
-                                            },
-                                            {
-                                                label: 'Remove',
-                                                icon: LucideTrash,
-                                                handler: () =>
-                                                    handleRemove(
-                                                        String(category.id),
-                                                        String(sub_category.id)
-                                                    ),
-                                            },
-                                        ]"
-                                    >
-                                        <CommonButton
-                                            variant="dark-purple"
-                                            size="sm"
-                                            square
-                                        >
-                                            <LucideEllipsis :size="16" />
-                                        </CommonButton>
-                                    </DropDown>
-                                </li>
-                            </ul>
+                                :sub-category="sub_category"
+                                :category-id="category.id"
+                                :parent-index="index"
+                                :sub-index="sub_index"
+                                @dragstart="onDragStart"
+                                @drop="onDrop"
+                                @edit="handleEdit"
+                                @remove="handleRemove"
+                            />
                         </section>
                     </Transition>
                 </div>
@@ -241,7 +71,6 @@
 </template>
 
 <script setup lang="ts">
-import { LucideEdit, LucideTrash } from '#components';
 import { useCategoriesStore } from '~/store/categories';
 import type { Category } from '~/types/categories';
 import type { HistoryActionEvents } from '~/types/common';
@@ -250,14 +79,16 @@ import formatList from '~/utils/common';
 const categoriesStore = useCategoriesStore();
 const categories = ref<Category[]>([]);
 
-const showEditModal = ref(false)
+const showEditModal = ref(false);
 const warningDeleteModal = ref(false);
-
 const selectedCategoryId = ref<string | null>(null);
 const selectedSubCategoryId = ref<string | null>(null);
-
 const selectedCategory = ref<Category | null>(null);
-
+const draggedItem = ref<{
+    categoryId: number;
+    type: 'category' | 'subcategory';
+    subId?: number;
+} | null>(null);
 
 const actions = (action: HistoryActionEvents) => {};
 
@@ -271,14 +102,7 @@ const toggleSubCategories = (categoryId: string) => {
     }
 };
 
-// Drag state
-const draggedItem = ref<{
-    categoryId: number;
-    type: 'category' | 'subcategory';
-    subId?: number;
-} | null>(null);
-
-// Drag event handlers
+// Drag and Drop handlers remain the same
 const onDragStart = (
     event: DragEvent,
     categoryId: number,
@@ -314,11 +138,7 @@ const onDrop = (
         if (fromIndex !== -1 && toIndex !== -1) {
             const [movedCategory] = categories.value.splice(fromIndex, 1);
             categories.value.splice(toIndex, 0, movedCategory);
-
-            // Recalculate the order for all categories
-            categories.value.forEach((cat, index) => {
-                cat.order = index + 1;
-            });
+            categories.value.forEach((cat, index) => (cat.order = index + 1));
         }
     } else if (
         type === 'subcategory' &&
@@ -341,28 +161,25 @@ const onDrop = (
                     1
                 );
                 category.sub_categories.splice(toIndex, 0, movedSubcategory);
-
-                // Recalculate the order for all subcategories in this category
-                category.sub_categories.forEach((sub, index) => {
-                    sub.order = index + 1;
-                });
+                category.sub_categories.forEach(
+                    (sub, index) => (sub.order = index + 1)
+                );
             }
         }
     }
 
     categoriesStore.reorderCategories(categories.value);
-
     draggedItem.value = null;
 };
 
 const handleEdit = (category: Category) => {
-    selectedCategory.value = category
-    showEditModal.value = true
+    selectedCategory.value = category;
+    showEditModal.value = true;
 };
 
 const updateCategory = (category: Category) => {
-    categoriesStore.updateCategory(category.id, category)
-}
+    categoriesStore.updateCategory(category.id, category);
+};
 
 const removeCategory = () => {
     if (selectedCategoryId.value) {
@@ -373,7 +190,6 @@ const removeCategory = () => {
             )
             .finally(() => {
                 selectedCategoryId.value = null;
-
                 warningDeleteModal.value = false;
             });
     }
@@ -381,7 +197,6 @@ const removeCategory = () => {
 
 const handleRemove = (categoryId: string, subId?: string) => {
     warningDeleteModal.value = true;
-
     selectedCategoryId.value = categoryId;
     selectedSubCategoryId.value = subId ?? null;
 };
@@ -431,90 +246,5 @@ watch(
     display: flex;
     flex-direction: column;
     gap: 4px;
-}
-
-.categories__row {
-    display: grid;
-    grid-template-columns: 32px 40px 200px 100px 1fr 40px 72px;
-    gap: 16px;
-    padding: 12px;
-    align-items: center;
-    transition: background 0.2s ease-in-out;
-    width: 100%;
-    border-radius: 12px;
-    border: 2px dashed transparent;
-}
-
-.categories__row.dragged {
-    border: 2px dashed var(--color-purple);
-}
-
-.subcategories__row {
-    display: grid;
-    grid-template-columns: 32px 40px 200px 100px 1fr 72px;
-    gap: 16px;
-    background-color: var(--color-gray-800);
-    padding: 12px;
-    border-radius: 6px;
-    align-items: center;
-    transition: background 0.2s ease-in-out;
-    width: 100%;
-}
-
-.subcategories__row.dragged {
-    border: 2px dashed var(--color-purple);
-}
-
-.categories__row-item {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
-.categories__row-item.actions {
-    display: flex;
-    flex-direction: row !important;
-    gap: 8px;
-    align-items: center;
-}
-
-.categories__row-head {
-    color: var(--color-secondary);
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 14px;
-}
-
-.categories__row-label {
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 22px;
-    letter-spacing: 0%;
-    vertical-align: middle;
-    display: flex;
-    align-items: center;
-    gap: 4px;
-}
-
-.categories__row-count {
-    background-color: #1e3c3c;
-    color: var(--color-green);
-    border-radius: 100px;
-    padding: 0 12px;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 18px;
-    text-align: center;
-    letter-spacing: 0%;
-    vertical-align: middle;
-}
-
-.rotate-180 {
-    transform: rotate(180deg);
-    transition: transform 0.3s ease-in-out;
-}
-
-.folder-icon {
-    color: var(--color-secondary);
 }
 </style>
