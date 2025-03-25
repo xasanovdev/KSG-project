@@ -1,26 +1,26 @@
 <script setup lang="ts">
-import { watch } from "vue";
+import { watch } from 'vue';
 
 const props = defineProps<{ modelValue: boolean; title?: string }>();
-const emit = defineEmits(["update:modelValue"]);
+const emit = defineEmits(['update:modelValue']);
 
 const closeModal = () => {
-    emit("update:modelValue", false);
+    emit('update:modelValue', false);
 };
 
 watch(
     () => props.modelValue,
     (newVal) => {
         if (newVal) {
-            document.addEventListener("keydown", handleKeydown);
+            document.addEventListener('keydown', handleKeydown);
         } else {
-            document.removeEventListener("keydown", handleKeydown);
+            document.removeEventListener('keydown', handleKeydown);
         }
-    },
+    }
 );
 
 const handleKeydown = (event: KeyboardEvent) => {
-    if (event.key === "Escape") closeModal();
+    if (event.key === 'Escape') closeModal();
 };
 </script>
 

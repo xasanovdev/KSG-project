@@ -144,22 +144,46 @@ export default defineEventHandler(async (event) => {
 
     if (method === 'DELETE') {
         const body = await readBody(event);
-        const { categoryId } = body;
+        const { categoryId, subId } = body;
 
-        const categories = readJsonFile(CATEGORIES_FILE);
-        const filteredCategories = categories.filter(
-            (c: Category) => String(c.id) !== String(categoryId)
-        );
+        let categories = readJsonFile(CATEGORIES_FILE);
 
-        writeJsonFile(CATEGORIES_FILE, filteredCategories);
+        if (subId) {
+            // Delete subcategory from the given category
+            categories = categories.map((category: Category) => {
+                if (String(category.id) === String(categoryId)) {
+                    return {
+                        ...category,
+                        sub_categories: category.sub_categories?.filter(
+                            (sub: SubCategory) =>
+                                String(sub.id) !== String(subId)
+                        ),
+                    };
+                }
+                return category;
+            });
+        } else {
+            // Delete entire category
+            categories = categories.filter(
+                (category: Category) =>
+                    String(category.id) !== String(categoryId)
+            );
+        }
+
+        writeJsonFile(CATEGORIES_FILE, categories);
 
         // Log action
         addActionToHistory({
             type: 'delete',
             timestamp: Date.now(),
-            details: { categoryId },
+            details: subId ? { categoryId, subId } : { categoryId },
         });
 
-        return { success: true, message: 'Category deleted successfully' };
+        return {
+            success: true,
+            message: subId
+                ? 'Subcategory deleted successfully'
+                : 'Category deleted successfully',
+        };
     }
 });

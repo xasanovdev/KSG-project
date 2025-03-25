@@ -101,7 +101,8 @@
                                     {
                                         label: 'Remove',
                                         icon: LucideTrash,
-                                        handler: () => handleRemove(category.id),
+                                        handler: () =>
+                                            handleRemove(String(category.id)),
                                     },
                                 ]"
                             >
@@ -188,13 +189,31 @@
                                     }}</span>
                                 </li>
                                 <li class="categories__row-item actions">
-                                    <CommonButton
-                                        variant="dark-purple"
-                                        size="sm"
-                                        square
+                                    <DropDown
+                                        :actions="[
+                                            {
+                                                label: 'Edit',
+                                                icon: LucideEdit,
+                                                handler: () => handleEdit(),
+                                            },
+                                            {
+                                                label: 'Remove',
+                                                icon: LucideTrash,
+                                                handler: () =>
+                                                    handleRemove(
+                                                        String(category.id), String(sub_category.id)
+                                                    ),
+                                            },
+                                        ]"
                                     >
-                                        <LucideEllipsis :size="16" />
-                                    </CommonButton>
+                                        <CommonButton
+                                            variant="dark-purple"
+                                            size="sm"
+                                            square
+                                        >
+                                            <LucideEllipsis :size="16" />
+                                        </CommonButton>
+                                    </DropDown>
                                 </li>
                             </ul>
                         </section>
@@ -202,7 +221,6 @@
                 </div>
             </div>
         </section>
-
 
         <CommonWarningModal
             v-model="warningDeleteModal"
@@ -224,8 +242,9 @@ import formatList from '~/utils/common';
 const categoriesStore = useCategoriesStore();
 const categories = ref<Category[]>([]);
 
-const warningDeleteModal = ref(false)
-const selectedCategoryId = ref<string | null>(null)
+const warningDeleteModal = ref(false);
+const selectedCategoryId = ref<string | null>(null);
+const selectedSubCategoryId = ref<string | null>(null);
 
 const actions = (action: HistoryActionEvents) => {};
 
@@ -323,35 +342,40 @@ const onDrop = (
     draggedItem.value = null;
 };
 
-const handleEdit = () => {
-};
+const handleEdit = () => {};
 
 const removeCategory = () => {
-    if(selectedCategoryId.value) {
-        categoriesStore.deleteCategory(selectedCategoryId.value).finally(() => {
-            selectedCategoryId.value = null
+    if (selectedCategoryId.value) {
+        categoriesStore.deleteCategory(selectedCategoryId.value, selectedSubCategoryId.value).finally(() => {
+            selectedCategoryId.value = null;
 
-            warningDeleteModal.value = false
-        })
+            warningDeleteModal.value = false;
+        });
     }
-}
+};
 
-const handleRemove = (id: string) => {
+const handleRemove = (categoryId: string, subId?: string) => {
+
     warningDeleteModal.value = true;
 
-    selectedCategoryId.value = String(id)
+    selectedCategoryId.value = categoryId;
+    selectedSubCategoryId.value = subId ?? null;
 };
 
 onMounted(() => {
-    categoriesStore.fetchCategories()
+    categoriesStore.fetchCategories();
 });
 
-watch(() => categoriesStore.categories, () => {
-    categories.value = categoriesStore.categories.map((category) => ({
-        ...category,
-        hasOpenedSubCategories: false,
-    }));
-}, {deep: true})
+watch(
+    () => categoriesStore.categories,
+    () => {
+        categories.value = categoriesStore.categories.map((category) => ({
+            ...category,
+            hasOpenedSubCategories: false,
+        }));
+    },
+    { deep: true }
+);
 </script>
 
 <style lang="css" scoped>

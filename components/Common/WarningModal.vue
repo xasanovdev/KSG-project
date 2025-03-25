@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Ref } from "vue";
+import type { Ref } from 'vue';
 
 interface Props {
     title: string;
@@ -7,8 +7,8 @@ interface Props {
 }
 
 interface Emits {
-    (e: "confirm"): void;
-    (e: "cancel"): void;
+    (e: 'confirm'): void;
+    (e: 'cancel'): void;
 }
 
 defineProps<Props>();
@@ -24,7 +24,9 @@ const showWarningModal = defineModel() as Ref<boolean>;
             <h3 class="warning-title">{{ title }}</h3>
             <p class="warning-message">{{ subtitle }}</p>
             <div class="warning-actions">
-                <CommonButton type="primary" @click="$emit('cancel')">Cancel</CommonButton>
+                <CommonButton type="primary" @click="$emit('cancel')"
+                    >Cancel</CommonButton
+                >
                 <CommonButton type="danger" @click="$emit('confirm')"
                     >Confirm</CommonButton
                 >

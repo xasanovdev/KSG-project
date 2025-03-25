@@ -5,17 +5,19 @@
     "order": 3,
     "sub_categories": [
       {
-        "id": 6,
-        "name": "Weapons",
-        "order": 1
-      },
-      {
         "id": 5,
         "name": "Skins",
         "order": 2
       }
     ],
-    "hasOpenedSubCategories": false
+    "hasOpenedSubCategories": false,
+    "subcategories": [
+      {
+        "id": 6,
+        "name": "Weapons",
+        "order": 1
+      }
+    ]
   },
   {
     "id": 2,

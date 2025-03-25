@@ -126,14 +126,14 @@ export const useCategoriesStore = defineStore('categories', {
         },
 
         // Delete category
-        async deleteCategory(categoryId: string) {
+        async deleteCategory(categoryId: string, subId?: string) {
             this.loading = true;
             this.error = null;
 
             try {
                 await $fetch('/api/categories', {
                     method: 'DELETE',
-                    body: { categoryId },
+                    body: { categoryId, subId },
                 });
 
                 // Refetch categories instead of manually filtering
