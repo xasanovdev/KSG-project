@@ -2,7 +2,7 @@
   {
     "id": 3,
     "name": "Rust",
-    "order": 3,
+    "order": 1,
     "sub_categories": [
       {
         "id": 5,
@@ -21,8 +21,8 @@
   },
   {
     "id": 2,
-    "name": "CS 2",
-    "order": 4,
+    "name": "",
+    "order": 2,
     "sub_categories": [
       {
         "id": 3,
@@ -31,7 +31,7 @@
       },
       {
         "id": 4,
-        "name": "Knives",
+        "name": "Knive",
         "order": 2
       }
     ],
@@ -40,7 +40,7 @@
   {
     "id": 4,
     "name": "PUBG",
-    "order": 5,
+    "order": 3,
     "sub_categories": [
       {
         "id": 7,

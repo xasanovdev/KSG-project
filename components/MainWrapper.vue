@@ -96,7 +96,7 @@
                                     {
                                         label: 'Edit',
                                         icon: LucideEdit,
-                                        handler: () => handleEdit(),
+                                        handler: () => handleEdit(category),
                                     },
                                     {
                                         label: 'Remove',
@@ -194,14 +194,15 @@
                                             {
                                                 label: 'Edit',
                                                 icon: LucideEdit,
-                                                handler: () => handleEdit(),
+                                                handler: () => handleEdit(category),
                                             },
                                             {
                                                 label: 'Remove',
                                                 icon: LucideTrash,
                                                 handler: () =>
                                                     handleRemove(
-                                                        String(category.id), String(sub_category.id)
+                                                        String(category.id),
+                                                        String(sub_category.id)
                                                     ),
                                             },
                                         ]"
@@ -222,12 +223,19 @@
             </div>
         </section>
 
-        <CommonWarningModal
+        <LazyModalWarning
             v-model="warningDeleteModal"
             title="Are you sure?"
             subtitle="Do you really want to delete?"
             @confirm="removeCategory"
             @cancel="warningDeleteModal = false"
+        />
+
+        <LazyModalEdit
+            v-model="showEditModal"
+            :category="selectedCategory"
+            @save="updateCategory"
+            @cancel="showEditModal = false"
         />
     </main>
 </template>
@@ -242,9 +250,14 @@ import formatList from '~/utils/common';
 const categoriesStore = useCategoriesStore();
 const categories = ref<Category[]>([]);
 
+const showEditModal = ref(false)
 const warningDeleteModal = ref(false);
+
 const selectedCategoryId = ref<string | null>(null);
 const selectedSubCategoryId = ref<string | null>(null);
+
+const selectedCategory = ref<Category | null>(null);
+
 
 const actions = (action: HistoryActionEvents) => {};
 
@@ -342,20 +355,31 @@ const onDrop = (
     draggedItem.value = null;
 };
 
-const handleEdit = () => {};
+const handleEdit = (category: Category) => {
+    selectedCategory.value = category
+    showEditModal.value = true
+};
+
+const updateCategory = (category: Category) => {
+    categoriesStore.updateCategory(category.id, category)
+}
 
 const removeCategory = () => {
     if (selectedCategoryId.value) {
-        categoriesStore.deleteCategory(selectedCategoryId.value, selectedSubCategoryId.value).finally(() => {
-            selectedCategoryId.value = null;
+        categoriesStore
+            .deleteCategory(
+                selectedCategoryId.value,
+                selectedSubCategoryId.value
+            )
+            .finally(() => {
+                selectedCategoryId.value = null;
 
-            warningDeleteModal.value = false;
-        });
+                warningDeleteModal.value = false;
+            });
     }
 };
 
 const handleRemove = (categoryId: string, subId?: string) => {
-
     warningDeleteModal.value = true;
 
     selectedCategoryId.value = categoryId;

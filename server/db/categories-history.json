@@ -22,5 +22,91 @@
       "categoryId": "3",
       "subId": "6"
     }
+  },
+  {
+    "type": "create",
+    "timestamp": 1742898634827,
+    "details": {
+      "categoriesCount": 3,
+      "categoryNames": [
+        "CS 2",
+        "Rust",
+        "PUBG"
+      ]
+    }
+  },
+  {
+    "type": "create",
+    "timestamp": 1742898636265,
+    "details": {
+      "categoriesCount": 3,
+      "categoryNames": [
+        "Rust",
+        "PUBG",
+        "CS 2"
+      ]
+    }
+  },
+  {
+    "type": "create",
+    "timestamp": 1742898637915,
+    "details": {
+      "categoriesCount": 3,
+      "categoryNames": [
+        "Rust",
+        "CS 2",
+        "PUBG"
+      ]
+    }
+  },
+  {
+    "type": "update",
+    "timestamp": 1742899841606,
+    "details": {
+      "categoryId": 2,
+      "updates": {
+        "id": 2,
+        "name": "CS 2",
+        "order": 2,
+        "sub_categories": [
+          {
+            "id": 3,
+            "name": "Gloves",
+            "order": 1
+          },
+          {
+            "id": 4,
+            "name": "Knive",
+            "order": 2
+          }
+        ],
+        "hasOpenedSubCategories": false
+      }
+    }
+  },
+  {
+    "type": "update",
+    "timestamp": 1742900053591,
+    "details": {
+      "categoryId": 2,
+      "updates": {
+        "id": 2,
+        "name": "",
+        "order": 2,
+        "sub_categories": [
+          {
+            "id": 3,
+            "name": "Gloves",
+            "order": 1
+          },
+          {
+            "id": 4,
+            "name": "Knive",
+            "order": 2
+          }
+        ],
+        "hasOpenedSubCategories": false
+      }
+    }
   }
 ]
