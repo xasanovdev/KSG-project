@@ -145,19 +145,6 @@ const dropdownActions = computed(() => [
     gap: 4px;
 }
 
-.categories__row-count {
-    background-color: #1e3c3c;
-    color: var(--color-green);
-    border-radius: 100px;
-    padding: 0 12px;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 18px;
-    text-align: center;
-    letter-spacing: 0%;
-    vertical-align: middle;
-}
-
 .rotate-180 {
     transform: rotate(180deg);
     transition: transform 0.3s ease-in-out;

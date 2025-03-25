@@ -7,13 +7,25 @@ interface CategoriesState {
     actions: UserAction[];
     loading: boolean;
     error: string | null;
+    categoriesPaginationData: {
+        page: number;
+        limit: number;
+        total: number;
+        totalPages: number;
+    };
 }
 
 export const useCategoriesStore = defineStore('categories', {
     state: (): CategoriesState => ({
         categories: [],
+        categoriesPaginationData: {
+            page: 1,
+            limit: 10,
+            total: 0,
+            totalPages: 1,
+        },
         actions: [],
-        loading: false,
+        loading: true,
         error: null,
     }),
 
@@ -42,12 +54,20 @@ export const useCategoriesStore = defineStore('categories', {
 
     actions: {
         // Fetch all categories
-        async fetchCategories() {
+        async fetchCategories(newPage: number) {
             this.loading = true;
             this.error = null;
 
             try {
-                this.categories = await $fetch('/api/categories');
+                const data = await $fetch('/api/categories', {
+                    method: 'GET',
+                    params: {
+                        page: newPage,
+                    },
+                });
+
+                this.categories = await data.data;
+                this.categoriesPaginationData = data.pagination;
             } catch (error) {
                 this.error =
                     error instanceof Error

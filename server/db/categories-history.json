@@ -1,261 +1,304 @@
 [
-  {
-    "type": "delete",
-    "timestamp": 1742898318448,
-    "details": {
-      "categoryId": "3",
-      "subId": "6"
+    {
+        "type": "delete",
+        "timestamp": 1742898417772,
+        "details": {
+            "categoryId": "3",
+            "subId": "6"
+        }
+    },
+    {
+        "type": "create",
+        "timestamp": 1742898634827,
+        "details": {
+            "categoriesCount": 3,
+            "categoryNames": ["CS 2", "Rust", "PUBG"]
+        }
+    },
+    {
+        "type": "create",
+        "timestamp": 1742898636265,
+        "details": {
+            "categoriesCount": 3,
+            "categoryNames": ["Rust", "PUBG", "CS 2"]
+        }
+    },
+    {
+        "type": "create",
+        "timestamp": 1742898637915,
+        "details": {
+            "categoriesCount": 3,
+            "categoryNames": ["Rust", "CS 2", "PUBG"]
+        }
+    },
+    {
+        "type": "update",
+        "timestamp": 1742899841606,
+        "details": {
+            "categoryId": 2,
+            "updates": {
+                "id": 2,
+                "name": "CS 2",
+                "order": 2,
+                "sub_categories": [
+                    {
+                        "id": 3,
+                        "name": "Gloves",
+                        "order": 1
+                    },
+                    {
+                        "id": 4,
+                        "name": "Knive",
+                        "order": 2
+                    }
+                ],
+                "hasOpenedSubCategories": false
+            }
+        }
+    },
+    {
+        "type": "update",
+        "timestamp": 1742900053591,
+        "details": {
+            "categoryId": 2,
+            "updates": {
+                "id": 2,
+                "name": "",
+                "order": 2,
+                "sub_categories": [
+                    {
+                        "id": 3,
+                        "name": "Gloves",
+                        "order": 1
+                    },
+                    {
+                        "id": 4,
+                        "name": "Knive",
+                        "order": 2
+                    }
+                ],
+                "hasOpenedSubCategories": false
+            }
+        }
+    },
+    {
+        "type": "update",
+        "timestamp": 1742900390463,
+        "details": {
+            "categoryId": 2,
+            "updates": {
+                "id": 2,
+                "name": "Rust",
+                "order": 2,
+                "sub_categories": [
+                    {
+                        "id": 4,
+                        "name": "Knive",
+                        "order": 2
+                    }
+                ],
+                "hasOpenedSubCategories": false
+            }
+        }
+    },
+    {
+        "type": "update",
+        "timestamp": 1742900404121,
+        "details": {
+            "categoryId": 2,
+            "updates": {
+                "id": 2,
+                "name": "Rust",
+                "order": 2,
+                "sub_categories": [
+                    {
+                        "id": 4,
+                        "name": "asdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKnive",
+                        "order": 2
+                    },
+                    {
+                        "id": 1742900399225,
+                        "name": "hello my friend",
+                        "order": 2
+                    }
+                ],
+                "hasOpenedSubCategories": false
+            }
+        }
+    },
+    {
+        "type": "delete",
+        "timestamp": 1742900415766,
+        "details": {
+            "categoryId": "2"
+        }
+    },
+    {
+        "type": "create",
+        "timestamp": 1742900660177,
+        "details": {
+            "categoriesCount": 3,
+            "categoryNames": ["Rust", "PUBG", "Bolad goood"]
+        }
+    },
+    {
+        "type": "create",
+        "timestamp": 1742900810278,
+        "details": {
+            "categoriesCount": 4,
+            "categoryNames": ["Rust", "PUBG", "Bolad goood", "test"]
+        }
+    },
+    {
+        "type": "create",
+        "timestamp": 1742905800086,
+        "details": {
+            "categoriesCount": 4,
+            "categoryNames": ["Rust", "PUBG", "Bolad goood", "test"]
+        }
+    },
+    {
+        "type": "create",
+        "timestamp": 1742907158113,
+        "details": {
+            "categoriesCount": 4,
+            "categoryNames": ["PUBG", "Rust", "Bolad goood", "test"]
+        }
+    },
+    {
+        "type": "create",
+        "timestamp": 1742907162432,
+        "details": {
+            "categoriesCount": 4,
+            "categoryNames": ["PUBG", "test", "Rust", "Bolad goood"]
+        }
+    },
+    {
+        "type": "delete",
+        "timestamp": 1742907272205,
+        "details": {
+            "categoryId": "1742900718080",
+            "subId": "1742900740729"
+        }
+    },
+    {
+        "type": "update",
+        "timestamp": 1742907858146,
+        "details": {
+            "categoryId": 4,
+            "updates": {
+                "id": 4,
+                "name": "PUBG 2",
+                "order": 1,
+                "sub_categories": [
+                    {
+                        "id": 7,
+                        "name": "Outfits",
+                        "order": 1
+                    },
+                    {
+                        "id": 8,
+                        "name": "Guns",
+                        "order": 2
+                    }
+                ],
+                "hasOpenedSubCategories": false
+            }
+        }
+    },
+    {
+        "type": "create",
+        "timestamp": 1742908383203,
+        "details": {
+            "categoriesCount": 25,
+            "categoryNames": [
+                "Fortnite",
+                "Call of Duty: Warzone",
+                "Apex Legends",
+                "PUBG",
+                "Minecraft",
+                "Valorant",
+                "League of Legends",
+                "Overwatch 2",
+                "Genshin Impact",
+                "Counter-Strike 2",
+                "Dota 2",
+                "Rocket League",
+                "FIFA 23",
+                "NBA 2K23",
+                "Among Us",
+                "Roblox",
+                "World of Warcraft",
+                "Destiny 2",
+                "Hearthstone",
+                "The Sims 4",
+                "Elden Ring",
+                "Cyberpunk 2077",
+                "Animal Crossing",
+                "Stardew Valley",
+                "Grand Theft Auto V"
+            ]
+        }
+    },
+    {
+        "type": "create",
+        "timestamp": 1742908390047,
+        "details": {
+            "categoriesCount": 25,
+            "categoryNames": [
+                "Fortnite",
+                "Call of Duty: Warzone",
+                "Apex Legends",
+                "PUBG",
+                "Minecraft",
+                "Valorant",
+                "League of Legends",
+                "Overwatch 2",
+                "Genshin Impact",
+                "Counter-Strike 2",
+                "Dota 2",
+                "Rocket League",
+                "FIFA 23",
+                "NBA 2K23",
+                "Among Us",
+                "Roblox",
+                "World of Warcraft",
+                "Destiny 2",
+                "Hearthstone",
+                "The Sims 4",
+                "Elden Ring",
+                "Cyberpunk 2077",
+                "Animal Crossing",
+                "Stardew Valley",
+                "Grand Theft Auto V"
+            ]
+        }
+    },
+    {
+        "type": "delete",
+        "timestamp": 1742928839097,
+        "details": {
+            "categoryId": "1",
+            "subId": "101"
+        }
+    },
+    {
+        "type": "create",
+        "timestamp": 1742929734349,
+        "details": {
+            "categoriesCount": 10,
+            "categoryNames": [
+                "Fortnite",
+                "Call of Duty: Warzone",
+                "Apex Legends",
+                "PUBG",
+                "Minecraft",
+                "Valorant",
+                "Genshin Impact",
+                "League of Legends",
+                "Overwatch 2",
+                "Counter-Strike 2"
+            ]
+        }
     }
-  },
-  {
-    "type": "delete",
-    "timestamp": 1742898341454,
-    "details": {
-      "categoryId": "3",
-      "subId": "5"
-    }
-  },
-  {
-    "type": "delete",
-    "timestamp": 1742898417772,
-    "details": {
-      "categoryId": "3",
-      "subId": "6"
-    }
-  },
-  {
-    "type": "create",
-    "timestamp": 1742898634827,
-    "details": {
-      "categoriesCount": 3,
-      "categoryNames": [
-        "CS 2",
-        "Rust",
-        "PUBG"
-      ]
-    }
-  },
-  {
-    "type": "create",
-    "timestamp": 1742898636265,
-    "details": {
-      "categoriesCount": 3,
-      "categoryNames": [
-        "Rust",
-        "PUBG",
-        "CS 2"
-      ]
-    }
-  },
-  {
-    "type": "create",
-    "timestamp": 1742898637915,
-    "details": {
-      "categoriesCount": 3,
-      "categoryNames": [
-        "Rust",
-        "CS 2",
-        "PUBG"
-      ]
-    }
-  },
-  {
-    "type": "update",
-    "timestamp": 1742899841606,
-    "details": {
-      "categoryId": 2,
-      "updates": {
-        "id": 2,
-        "name": "CS 2",
-        "order": 2,
-        "sub_categories": [
-          {
-            "id": 3,
-            "name": "Gloves",
-            "order": 1
-          },
-          {
-            "id": 4,
-            "name": "Knive",
-            "order": 2
-          }
-        ],
-        "hasOpenedSubCategories": false
-      }
-    }
-  },
-  {
-    "type": "update",
-    "timestamp": 1742900053591,
-    "details": {
-      "categoryId": 2,
-      "updates": {
-        "id": 2,
-        "name": "",
-        "order": 2,
-        "sub_categories": [
-          {
-            "id": 3,
-            "name": "Gloves",
-            "order": 1
-          },
-          {
-            "id": 4,
-            "name": "Knive",
-            "order": 2
-          }
-        ],
-        "hasOpenedSubCategories": false
-      }
-    }
-  },
-  {
-    "type": "update",
-    "timestamp": 1742900390463,
-    "details": {
-      "categoryId": 2,
-      "updates": {
-        "id": 2,
-        "name": "Rust",
-        "order": 2,
-        "sub_categories": [
-          {
-            "id": 4,
-            "name": "Knive",
-            "order": 2
-          }
-        ],
-        "hasOpenedSubCategories": false
-      }
-    }
-  },
-  {
-    "type": "update",
-    "timestamp": 1742900404121,
-    "details": {
-      "categoryId": 2,
-      "updates": {
-        "id": 2,
-        "name": "Rust",
-        "order": 2,
-        "sub_categories": [
-          {
-            "id": 4,
-            "name": "asdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKnive",
-            "order": 2
-          },
-          {
-            "id": 1742900399225,
-            "name": "hello my friend",
-            "order": 2
-          }
-        ],
-        "hasOpenedSubCategories": false
-      }
-    }
-  },
-  {
-    "type": "delete",
-    "timestamp": 1742900415766,
-    "details": {
-      "categoryId": "2"
-    }
-  },
-  {
-    "type": "create",
-    "timestamp": 1742900660177,
-    "details": {
-      "categoriesCount": 3,
-      "categoryNames": [
-        "Rust",
-        "PUBG",
-        "Bolad goood"
-      ]
-    }
-  },
-  {
-    "type": "create",
-    "timestamp": 1742900810278,
-    "details": {
-      "categoriesCount": 4,
-      "categoryNames": [
-        "Rust",
-        "PUBG",
-        "Bolad goood",
-        "test"
-      ]
-    }
-  },
-  {
-    "type": "create",
-    "timestamp": 1742905800086,
-    "details": {
-      "categoriesCount": 4,
-      "categoryNames": [
-        "Rust",
-        "PUBG",
-        "Bolad goood",
-        "test"
-      ]
-    }
-  },
-  {
-    "type": "create",
-    "timestamp": 1742907158113,
-    "details": {
-      "categoriesCount": 4,
-      "categoryNames": [
-        "PUBG",
-        "Rust",
-        "Bolad goood",
-        "test"
-      ]
-    }
-  },
-  {
-    "type": "create",
-    "timestamp": 1742907162432,
-    "details": {
-      "categoriesCount": 4,
-      "categoryNames": [
-        "PUBG",
-        "test",
-        "Rust",
-        "Bolad goood"
-      ]
-    }
-  },
-  {
-    "type": "delete",
-    "timestamp": 1742907272205,
-    "details": {
-      "categoryId": "1742900718080",
-      "subId": "1742900740729"
-    }
-  },
-  {
-    "type": "update",
-    "timestamp": 1742907858146,
-    "details": {
-      "categoryId": 4,
-      "updates": {
-        "id": 4,
-        "name": "PUBG 2",
-        "order": 1,
-        "sub_categories": [
-          {
-            "id": 7,
-            "name": "Outfits",
-            "order": 1
-          },
-          {
-            "id": 8,
-            "name": "Guns",
-            "order": 2
-          }
-        ],
-        "hasOpenedSubCategories": false
-      }
-    }
-  }
 ]

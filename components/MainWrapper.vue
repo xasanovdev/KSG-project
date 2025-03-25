@@ -67,6 +67,16 @@
             @save="updateCategory"
             @cancel="showEditModal = false"
         />
+
+        <CommonPagination
+            v-if="!categoriesStore.loading"
+            :total-pages="categoriesStore.categoriesPaginationData.total"
+            :current-page="currentPage"
+            :pagination-list="paginationList"
+            @next-page="nextPage"
+            @prev-page="prevPage"
+            @change-page="changePage"
+        />
     </main>
 </template>
 
@@ -76,13 +86,46 @@ import type { Category } from '~/types/categories';
 import type { HistoryActionEvents } from '~/types/common';
 
 const categoriesStore = useCategoriesStore();
+
 const categories = ref<Category[]>([]);
+
+const currentPage = ref(7);
+
+const paginationList = computed(() =>
+    generatePaginationData(
+        currentPage.value,
+        categoriesStore.categoriesPaginationData.total
+    )
+);
 
 const showEditModal = ref(false);
 const warningDeleteModal = ref(false);
+
 const selectedCategoryId = ref<string | null>(null);
 const selectedSubCategoryId = ref<string | null>(null);
 const selectedCategory = ref<Category | null>(null);
+
+const changePage = (page: number) => {
+    console.log(page);
+    if (!isNaN(page)) {
+        currentPage.value = page;
+
+        categoriesStore.fetchCategories(page);
+    }
+};
+
+const nextPage = () => {
+    currentPage.value += 1;
+
+    categoriesStore.fetchCategories(currentPage.value);
+};
+
+const prevPage = () => {
+    currentPage.value -= 1;
+
+    categoriesStore.fetchCategories(currentPage.value);
+};
+
 const draggedItem = ref<{
     categoryId: number;
     type: 'category' | 'subcategory';
@@ -179,7 +222,7 @@ const handleEdit = (category: Category) => {
 const updateCategory = (category: Category) => {
     categoriesStore.updateCategory(category.id, category).finally(() => {
         showEditModal.value = false;
-    })
+    });
 };
 
 const removeCategory = () => {
@@ -203,7 +246,7 @@ const handleRemove = (categoryId: string, subId?: string) => {
 };
 
 onMounted(() => {
-    categoriesStore.fetchCategories();
+    categoriesStore.fetchCategories(currentPage.value);
 });
 
 watch(
@@ -240,7 +283,7 @@ watch(
 
 .categories__list {
     width: 100%;
-    margin-top: 3rem;
+    margin: 3rem 0;
 }
 
 .categories__tbody {

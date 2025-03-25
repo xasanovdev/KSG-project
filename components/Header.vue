@@ -22,7 +22,7 @@ const categoriesStore = useCategoriesStore();
 const handleSave = (category: Category) => {
     categoriesStore.addCategory(category).finally(() => {
         showModal.value = false;
-    })
+    });
 };
 </script>
 

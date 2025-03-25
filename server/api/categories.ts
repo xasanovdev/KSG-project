@@ -70,15 +70,29 @@ export default defineEventHandler(async (event) => {
 
     if (method === 'GET') {
         const query = getQuery(event);
+        const categories = readJsonFile(CATEGORIES_FILE);
 
         if (query.type === 'history') {
-            // Retrieve action history
             return readJsonFile(ACTIONS_HISTORY_FILE);
         }
 
-        // Retrieve categories
-        const categories = readJsonFile(CATEGORIES_FILE);
-        return categories;
+        // Pagination
+        const page = parseInt(query.page as string) || 1;
+        const limit = parseInt(query.limit as string) || 10;
+        const startIndex = (page - 1) * limit;
+        const endIndex = startIndex + limit;
+
+        const paginatedCategories = categories.slice(startIndex, endIndex);
+
+        return {
+            data: paginatedCategories,
+            pagination: {
+                page,
+                limit,
+                total: categories.length,
+                totalPages: Math.ceil(categories.length / limit),
+            },
+        };
     }
 
     if (method === 'POST') {

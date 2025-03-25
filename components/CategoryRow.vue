@@ -156,7 +156,7 @@ const dropdownActions = computed(() => [
     background-color: #1e3c3c;
     color: var(--color-green);
     border-radius: 100px;
-    padding: 0 12px;
+    padding: 2px 12px;
     font-weight: 600;
     font-size: 14px;
     line-height: 18px;
