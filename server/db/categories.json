@@ -22,7 +22,7 @@
   {
     "id": 4,
     "name": "PUBG",
-    "order": 3,
+    "order": 2,
     "sub_categories": [
       {
         "id": 7,
@@ -40,7 +40,7 @@
   {
     "id": 1742900643769,
     "name": "Bolad goood",
-    "order": 1,
+    "order": 3,
     "sub_categories": [
       {
         "id": 1742900648208,
@@ -58,7 +58,7 @@
   {
     "id": 1742900718080,
     "name": "test",
-    "order": 1,
+    "order": 4,
     "sub_categories": [
       {
         "id": 1742900740729,

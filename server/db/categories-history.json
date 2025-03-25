@@ -185,5 +185,18 @@
         "test"
       ]
     }
+  },
+  {
+    "type": "create",
+    "timestamp": 1742905800086,
+    "details": {
+      "categoriesCount": 4,
+      "categoryNames": [
+        "Rust",
+        "PUBG",
+        "Bolad goood",
+        "test"
+      ]
+    }
   }
 ]
