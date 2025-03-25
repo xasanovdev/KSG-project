@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { useCategoriesStore } from '~/store/categories';
+import type { Category } from '~/types/categories';
 import { HistoryActionEvents } from '~/types/common';
 
 interface Props {
@@ -12,6 +14,14 @@ interface Emits {
 const emits = defineEmits<Emits>();
 
 defineProps<Props>();
+
+const showModal = ref(false)
+
+const categoriesStore = useCategoriesStore()
+
+const handleSave = (category: Category) => {
+    categoriesStore.addCategory(category)
+}
 </script>
 
 <template>
@@ -40,8 +50,23 @@ defineProps<Props>();
             >
                 <LucideArrowRight :size="16" />
             </CommonButton>
+            <CommonButton
+                variant="primary"
+                size="sm"
+                @click="showModal = true"
+            >
+                <LucidePlus :size="16" />
+                Add
+            </CommonButton>
         </div>
+
     </header>
+
+    <ModalEdit
+        v-model="showModal"
+        @save="handleSave"
+        @cancel="showModal = false"
+    />
 </template>
 
 <style lang="css" scoped>

@@ -1,65 +1,91 @@
 <script setup lang="ts">
 import type { Ref } from 'vue';
-import type { Category, SubCategory } from '~/types/categories';
+import type { Category } from '~/types/categories';
 
 interface Props {
-    category: Category;
+    category?: Category; // Optional for new category creation
 }
 
 interface Emits {
-    (
-        e: 'save',
-        data: Category
-    ): void;
+    (e: 'save', data: Category): void;
     (e: 'cancel'): void;
 }
 
 const props = defineProps<Props>();
-
 defineEmits<Emits>();
 
 const showEditModal = defineModel() as Ref<boolean>;
 
-const formData = ref<Category>(null);
-
-// Initialize form with provided category data
-watchEffect(() => {
-    formData.value = props.category
+const formData = ref<Category>({
+    id: props.category?.id ?? Date.now(), // Assigns ID for new category
+    name: props.category?.name ?? '',
+    order: props.category?.order ?? 1,
+    sub_categories: props.category?.sub_categories
+        ? [...props.category.sub_categories]
+        : [],
+    hasOpenedSubCategories: props.category?.hasOpenedSubCategories ?? false,
 });
+
+// Function to add a new subcategory
+const addSubcategory = () => {
+    formData.value.sub_categories.push({
+        id: Date.now(),
+        name: '',
+        order: formData.value.sub_categories.length + 1,
+    });
+};
+
+// Function to remove a subcategory
+const removeSubcategory = (index: number) => {
+    formData.value.sub_categories.splice(index, 1);
+};
 </script>
 
 <template>
-    <CommonModal v-model="showEditModal" title="Edit Category & Subcategories">
+    <CommonModal v-model="showEditModal" title="Edit / Create Category">
         <div class="edit__content">
-            <CommonInput
-                v-model="formData.name"
-                label="Category Name"
-            />
+            <!-- Category Name Input -->
+            <CommonInput v-model="formData.name" label="Category Name" />
 
-            <div
-                v-if="formData.sub_categories.length"
-                class="subcategories__section"
-            >
-                <h4>Edit Subcategories</h4>
+            <!-- Subcategories Section -->
+            <div class="subcategories__section">
+                <h4>Subcategories</h4>
                 <div
-                    v-for="(subName, index) in formData.sub_categories"
-                    :key="index"
+                    v-for="(sub, index) in formData.sub_categories"
+                    :key="sub.id"
                     class="subcategories__list"
                 >
                     <CommonInput
                         v-model="formData.sub_categories[index].name"
+                        class="subcategories__input"
                         :label="`Subcategory ${index + 1}`"
                     />
+                    <button
+                        class="remove-btn"
+                        @click="removeSubcategory(index)"
+                    >
+                        ✖
+                    </button>
                 </div>
+
+                <!-- Add Subcategory Button -->
+                <CommonButton
+                    type="secondary"
+                    class="add-subcategory-btn"
+                    @click="addSubcategory"
+                >
+                    + Add Subcategory
+                </CommonButton>
             </div>
 
+            <!-- Actions -->
             <div class="edit__actions">
-                <CommonButton type="primary" @click="$emit('cancel')"
-                    >Cancel</CommonButton
-                >
-                <CommonButton type="success" @click="$emit('save', formData)"
-                    >Save</CommonButton
-                >
+                <CommonButton type="primary" @click="$emit('cancel')">
+                    Cancel
+                </CommonButton>
+                <CommonButton type="success" @click="$emit('save', formData)">
+                    Save
+                </CommonButton>
             </div>
         </div>
     </CommonModal>
@@ -75,16 +101,32 @@ watchEffect(() => {
     text-align: left;
 }
 
-.edit__actions {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-    margin-top: 16px;
-}
-
 .subcategories__list {
     display: flex;
-    flex-direction: column;
-    gap: 4;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.subcategories__input {
+    width: 100%;
+}
+
+.remove-btn {
+    background: transparent;
+    border: none;
+    color: red;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.add-subcategory-btn {
+    margin-top: 10px;
+}
+
+.edit__actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+    margin-top: 16px;
 }
 </style>

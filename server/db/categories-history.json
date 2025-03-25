@@ -108,5 +108,82 @@
         "hasOpenedSubCategories": false
       }
     }
+  },
+  {
+    "type": "update",
+    "timestamp": 1742900390463,
+    "details": {
+      "categoryId": 2,
+      "updates": {
+        "id": 2,
+        "name": "Rust",
+        "order": 2,
+        "sub_categories": [
+          {
+            "id": 4,
+            "name": "Knive",
+            "order": 2
+          }
+        ],
+        "hasOpenedSubCategories": false
+      }
+    }
+  },
+  {
+    "type": "update",
+    "timestamp": 1742900404121,
+    "details": {
+      "categoryId": 2,
+      "updates": {
+        "id": 2,
+        "name": "Rust",
+        "order": 2,
+        "sub_categories": [
+          {
+            "id": 4,
+            "name": "asdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKniveasdfasfsafasfaffsafsKnive",
+            "order": 2
+          },
+          {
+            "id": 1742900399225,
+            "name": "hello my friend",
+            "order": 2
+          }
+        ],
+        "hasOpenedSubCategories": false
+      }
+    }
+  },
+  {
+    "type": "delete",
+    "timestamp": 1742900415766,
+    "details": {
+      "categoryId": "2"
+    }
+  },
+  {
+    "type": "create",
+    "timestamp": 1742900660177,
+    "details": {
+      "categoriesCount": 3,
+      "categoryNames": [
+        "Rust",
+        "PUBG",
+        "Bolad goood"
+      ]
+    }
+  },
+  {
+    "type": "create",
+    "timestamp": 1742900810278,
+    "details": {
+      "categoriesCount": 4,
+      "categoryNames": [
+        "Rust",
+        "PUBG",
+        "Bolad goood",
+        "test"
+      ]
+    }
   }
 ]

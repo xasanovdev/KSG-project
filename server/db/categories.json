@@ -20,24 +20,6 @@
     ]
   },
   {
-    "id": 2,
-    "name": "",
-    "order": 2,
-    "sub_categories": [
-      {
-        "id": 3,
-        "name": "Gloves",
-        "order": 1
-      },
-      {
-        "id": 4,
-        "name": "Knive",
-        "order": 2
-      }
-    ],
-    "hasOpenedSubCategories": false
-  },
-  {
     "id": 4,
     "name": "PUBG",
     "order": 3,
@@ -51,6 +33,37 @@
         "id": 8,
         "name": "Guns",
         "order": 2
+      }
+    ],
+    "hasOpenedSubCategories": false
+  },
+  {
+    "id": 1742900643769,
+    "name": "Bolad goood",
+    "order": 1,
+    "sub_categories": [
+      {
+        "id": 1742900648208,
+        "name": "test",
+        "order": 1
+      },
+      {
+        "id": 1742900649317,
+        "name": "test",
+        "order": 2
+      }
+    ],
+    "hasOpenedSubCategories": false
+  },
+  {
+    "id": 1742900718080,
+    "name": "test",
+    "order": 1,
+    "sub_categories": [
+      {
+        "id": 1742900740729,
+        "name": "",
+        "order": 1
       }
     ],
     "hasOpenedSubCategories": false
