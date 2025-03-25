@@ -1,16 +1,16 @@
 <template>
-    <ul class="subcategories__row" :class="{ 'selected': isSelected }">
+    <ul class="subcategories__row" :class="{ selected: isSelected }">
         <li class="categories__row-item drag-handle">
-            <LucideGripVertical :size="24"/>
+            <LucideGripVertical :size="24" />
         </li>
-        
+
         <li class="categories__row-item">
             <span class="categories__row-head">&#8470;</span>
             <span class="categories__row-label">
                 {{ categoryIndex + 1 }}.{{ subIndex + 1 }}
             </span>
         </li>
-        
+
         <li class="categories__row-item">
             <span class="categories__row-head">Name</span>
             <span class="categories__row-label">
@@ -18,28 +18,28 @@
                 {{ subCategory.name }}
             </span>
         </li>
-        
+
         <li class="categories__row-item">
             <span class="categories__row-head">Order</span>
             <div class="order-control">
-                <input 
-                    type="number" 
-                    :value="subCategory.order" 
-                    min="1" 
+                <input
+                    type="number"
+                    :value="subCategory.order"
+                    min="1"
                     :max="maxOrder"
                     class="order-input"
                     @change="handleOrderChange($event)"
                 />
                 <div class="order-buttons">
-                    <button 
-                        class="order-button" 
+                    <button
+                        class="order-button"
                         @click="changeOrder('up')"
                         :disabled="subCategory.order <= 1"
                     >
                         <LucideChevronUp :size="14" />
                     </button>
-                    <button 
-                        class="order-button" 
+                    <button
+                        class="order-button"
                         @click="changeOrder('down')"
                         :disabled="subCategory.order >= maxOrder"
                     >
@@ -48,11 +48,11 @@
                 </div>
             </div>
         </li>
-        
+
         <li class="categories__row-item"></li>
-        
+
         <li class="categories__row-item actions">
-            <CommonButton 
+            <CommonButton
                 :variant="isSelected ? 'primary-light' : 'dark-purple'"
                 size="sm"
                 square
@@ -87,24 +87,24 @@ const emit = defineEmits<{
 const handleOrderChange = (event: Event) => {
     const input = event.target as HTMLInputElement;
     const newOrder = parseInt(input.value);
-    
+
     if (isNaN(newOrder) || newOrder < 1 || newOrder > props.maxOrder) {
         // Reset to current value if invalid
         input.value = props.subCategory.order.toString();
         return;
     }
-    
+
     emit('order-change', props.subCategory.id, newOrder);
 };
 
 const changeOrder = (direction: 'up' | 'down') => {
     const currentOrder = props.subCategory.order;
     const newOrder = direction === 'up' ? currentOrder - 1 : currentOrder + 1;
-    
+
     if (newOrder < 1 || newOrder > props.maxOrder) {
         return;
     }
-    
+
     emit('order-change', props.subCategory.id, newOrder);
 };
 </script>

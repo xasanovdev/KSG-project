@@ -1,49 +1,46 @@
 <template>
-    <ul class="categories__row" :class="{ 'selected': isSelected }">
+    <ul class="categories__row" :class="{ selected: isSelected }">
         <li class="categories__row-item drag-handle">
-            <LucideGripVertical :size="24"/>
+            <LucideGripVertical :size="24" />
         </li>
 
         <li class="categories__row-item">
             <span class="categories__row-head">&#8470;</span>
             <span class="categories__row-label">{{ index + 1 }}</span>
         </li>
-        
+
         <li class="categories__row-item">
             <span class="categories__row-head">Name</span>
             <span class="categories__row-label">
                 <Transition name="fade" mode="out-in">
-                    <LucideFolder
-                        v-if="!isExpanded"
-                        class="folder-icon"
-                    />
+                    <LucideFolder v-if="!isExpanded" class="folder-icon" />
                     <LucideFolderOpen v-else />
                 </Transition>
                 {{ category.name }}
             </span>
         </li>
-        
+
         <li class="categories__row-item">
             <span class="categories__row-head">Order</span>
             <div class="order-control">
-                <input 
-                    type="number" 
-                    :value="category.order" 
-                    min="1" 
+                <input
+                    type="number"
+                    :value="category.order"
+                    min="1"
                     :max="maxOrder"
                     class="order-input"
                     @change="handleOrderChange($event)"
                 />
                 <div class="order-buttons">
-                    <button 
-                        class="order-button" 
+                    <button
+                        class="order-button"
                         @click="changeOrder('up')"
                         :disabled="category.order <= 1"
                     >
                         <LucideChevronUp :size="14" />
                     </button>
-                    <button 
-                        class="order-button" 
+                    <button
+                        class="order-button"
                         @click="changeOrder('down')"
                         :disabled="category.order >= maxOrder"
                     >
@@ -52,19 +49,24 @@
                 </div>
             </div>
         </li>
-        
+
         <li class="categories__row-item">
             <span class="categories__row-head">Sub categories</span>
             <span class="categories__row-label">
-                <template v-if="category.sub_categories && category.sub_categories.length">
+                <template
+                    v-if="
+                        category.sub_categories &&
+                        category.sub_categories.length
+                    "
+                >
                     {{ formattedSubCategories }}
                 </template>
                 <template v-else>-</template>
             </span>
         </li>
-        
+
         <li class="categories__row-item">
-            <span class="categories__row-count" :class="{ 'green': isSelected }">
+            <span class="categories__row-count" :class="{ green: isSelected }">
                 {{ subCategoriesCount }}
             </span>
         </li>
@@ -82,7 +84,7 @@
                     :size="16"
                 />
             </CommonButton>
-            <CommonButton 
+            <CommonButton
                 :variant="isSelected ? 'primary-light' : 'dark-purple'"
                 size="sm"
                 square
@@ -126,24 +128,24 @@ const formattedSubCategories = computed(() => {
 const handleOrderChange = (event: Event) => {
     const input = event.target as HTMLInputElement;
     const newOrder = parseInt(input.value);
-    
+
     if (isNaN(newOrder) || newOrder < 1 || newOrder > props.maxOrder) {
         // Reset to current value if invalid
         input.value = props.category.order.toString();
         return;
     }
-    
+
     emit('order-change', props.category.id, newOrder);
 };
 
 const changeOrder = (direction: 'up' | 'down') => {
     const currentOrder = props.category.order;
     const newOrder = direction === 'up' ? currentOrder - 1 : currentOrder + 1;
-    
+
     if (newOrder < 1 || newOrder > props.maxOrder) {
         return;
     }
-    
+
     emit('order-change', props.category.id, newOrder);
 };
 </script>
@@ -282,7 +284,8 @@ const changeOrder = (direction: 'up' | 'down') => {
     color: var(--color-secondary);
 }
 
-.toggle-button, .menu-button {
+.toggle-button,
+.menu-button {
     transition: all 0.2s ease-in-out;
 }
 

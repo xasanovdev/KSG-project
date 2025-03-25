@@ -11,27 +11,43 @@
                     draggable="true"
                     @dragstart="onDragStart($event, category.id, 'category')"
                     @dragover.prevent
-                    @drop="onDrop($event, category.id, 'category')" 
-                    :class="{'dragged': draggedItem?.categoryId === category.id && draggedItem.type === 'subcategory'}"
+                    @drop="onDrop($event, category.id, 'category')"
+                    :class="{
+                        dragged:
+                            draggedItem?.categoryId === category.id &&
+                            draggedItem.type === 'subcategory',
+                    }"
                 >
-                    <ul class="categories__row" :class="{'dragged': draggedItem?.categoryId === category.id}">
+                    <ul
+                        class="categories__row"
+                        :class="{
+                            dragged: draggedItem?.categoryId === category.id,
+                        }"
+                    >
                         <li class="categories__row-item drag-handle">
                             <LucideGripVertical
                                 :size="24"
                                 draggable="true"
-                                @dragstart="onDragStart($event, index, 'category')"
+                                @dragstart="
+                                    onDragStart($event, index, 'category')
+                                "
                             />
                         </li>
 
                         <li class="categories__row-item">
                             <span class="categories__row-head">&#8470;</span>
-                            <span class="categories__row-label">{{ index + 1 }}</span>
+                            <span class="categories__row-label">{{
+                                index + 1
+                            }}</span>
                         </li>
                         <li class="categories__row-item">
                             <span class="categories__row-head">Name</span>
                             <span class="categories__row-label">
                                 <Transition name="fade" mode="out-in">
-                                    <LucideFolder v-if="!category.hasOpenedSubCategories" class="folder-icon"/>
+                                    <LucideFolder
+                                        v-if="!category.hasOpenedSubCategories"
+                                        class="folder-icon"
+                                    />
                                     <LucideFolderOpen v-else />
                                 </Transition>
                                 {{ category.name }}
@@ -39,70 +55,144 @@
                         </li>
                         <li class="categories__row-item">
                             <span class="categories__row-head">Order</span>
-                            <span class="categories__row-label">{{ category.order }}</span>
+                            <span class="categories__row-label">{{
+                                category.order
+                            }}</span>
                         </li>
                         <li class="categories__row-item">
-                            <span class="categories__row-head">Sub categories</span>
-                            <span class="categories__row-label">{{ formatList(category.sub_categories) }}</span>
+                            <span class="categories__row-head"
+                                >Sub categories</span
+                            >
+                            <span class="categories__row-label">{{
+                                formatList(category.sub_categories)
+                            }}</span>
                         </li>
                         <li class="categories__row-item">
-                            <span class="categories__row-count">{{ category.sub_categories?.length }}</span>
+                            <span class="categories__row-count">{{
+                                category.sub_categories?.length
+                            }}</span>
                         </li>
 
                         <li class="categories__row-item actions">
                             <CommonButton
-                                @click="toggleSubCategories(String(category.id))"
+                                @click="
+                                    toggleSubCategories(String(category.id))
+                                "
                                 variant="primary"
                                 size="sm"
                                 square
                             >
                                 <LucideChevronDown
-                                    :class="{ 'rotate-180': category.hasOpenedSubCategories }"
+                                    :class="{
+                                        'rotate-180':
+                                            category.hasOpenedSubCategories,
+                                    }"
                                     :size="16"
                                 />
                             </CommonButton>
-                            <CommonButton variant="dark-purple" size="sm" square>
-                                <LucideEllipsis :size="16" />
-                            </CommonButton>
+
+                            <DropDown
+                                :actions="[
+                                    {
+                                        label: 'Edit',
+                                        icon: LucideEdit,
+                                        handler: () => handleEdit(),
+                                    },
+                                    {
+                                        label: 'Remove',
+                                        icon: LucideTrash,
+                                        handler: () => handleRemove(),
+                                    },
+                                ]"
+                            >
+                                <CommonButton
+                                    variant="dark-purple"
+                                    size="sm"
+                                    square
+                                >
+                                    <LucideEllipsis :size="16" />
+                                </CommonButton>
+                            </DropDown>
                         </li>
                     </ul>
 
                     <!-- Subcategories -->
                     <Transition name="slide-fade">
-                        <section v-if="category.hasOpenedSubCategories" class="subcategories__list">
+                        <section
+                            v-if="category.hasOpenedSubCategories"
+                            class="subcategories__list"
+                        >
                             <ul
                                 class="subcategories__row"
-                                v-for="(sub_category, sub_index) in category.sub_categories"
+                                v-for="(
+                                    sub_category, sub_index
+                                ) in category.sub_categories"
                                 :key="sub_category.id"
                                 draggable="true"
-                                @dragstart.stop="onDragStart($event, category.id, 'subcategory', sub_category.id)"
+                                @dragstart.stop="
+                                    onDragStart(
+                                        $event,
+                                        category.id,
+                                        'subcategory',
+                                        sub_category.id
+                                    )
+                                "
                                 @dragover.prevent
-                                @drop="onDrop($event, category.id, 'subcategory', sub_category.id)"
+                                @drop="
+                                    onDrop(
+                                        $event,
+                                        category.id,
+                                        'subcategory',
+                                        sub_category.id
+                                    )
+                                "
                             >
                                 <li class="categories__row-item drag-handle">
                                     <LucideGripVertical
                                         :size="24"
                                         draggable="true"
-                                        @dragstart.stop="onDragStart($event, category.id, 'subcategory', sub_category.id)"
+                                        @dragstart.stop="
+                                            onDragStart(
+                                                $event,
+                                                category.id,
+                                                'subcategory',
+                                                sub_category.id
+                                            )
+                                        "
                                     />
                                 </li>
                                 <li class="categories__row-item">
-                                    <span class="categories__row-head">&#8470;</span>
-                                    <span class="categories__row-label">{{ index + 1 }}. {{ sub_index + 1 }}</span>
+                                    <span class="categories__row-head"
+                                        >&#8470;</span
+                                    >
+                                    <span class="categories__row-label"
+                                        >{{ index + 1 }}.
+                                        {{ sub_index + 1 }}</span
+                                    >
                                 </li>
                                 <li class="categories__row-item">
-                                    <span class="categories__row-head">Name</span>
+                                    <span class="categories__row-head"
+                                        >Name</span
+                                    >
                                     <span class="categories__row-label">
                                         <LucideFile />
                                         {{ sub_category.name }}
                                     </span>
                                 </li>
                                 <li class="categories__row-item">
-                                    <span class="categories__row-head">Order</span>
-                                    <span class="categories__row-label">{{ sub_category.order }}</span>
+                                    <span class="categories__row-head"
+                                        >Order</span
+                                    >
+                                    <span class="categories__row-label">{{
+                                        sub_category.order
+                                    }}</span>
                                 </li>
                                 <li class="categories__row-item actions">
-                                    <CommonButton variant="dark-purple" size="sm" square>
+                                    <CommonButton
+                                        variant="dark-purple"
+                                        size="sm"
+                                        square
+                                    >
                                         <LucideEllipsis :size="16" />
                                     </CommonButton>
                                 </li>
@@ -115,8 +205,8 @@
     </main>
 </template>
 
-
 <script setup lang="ts">
+import { LucideEdit, LucideTrash } from '#components';
 import { useCategoriesStore } from '~/store/categories';
 import type { Category } from '~/types/categories';
 import type { HistoryActionEvents } from '~/types/common';
@@ -128,30 +218,54 @@ const categories = ref<Category[]>([]);
 const actions = (action: HistoryActionEvents) => {};
 
 const toggleSubCategories = (categoryId: string) => {
-    const categoryIndex = categories.value.findIndex(item => String(item.id) === categoryId);
+    const categoryIndex = categories.value.findIndex(
+        (item) => String(item.id) === categoryId
+    );
     if (categoryIndex !== -1) {
-        categories.value[categoryIndex].hasOpenedSubCategories = !categories.value[categoryIndex].hasOpenedSubCategories;
+        categories.value[categoryIndex].hasOpenedSubCategories =
+            !categories.value[categoryIndex].hasOpenedSubCategories;
     }
 };
 
 // Drag state
-const draggedItem = ref<{ categoryId: number, type: 'category' | 'subcategory', subId?: number } | null>(null);
+const draggedItem = ref<{
+    categoryId: number;
+    type: 'category' | 'subcategory';
+    subId?: number;
+} | null>(null);
 
 // Drag event handlers
-const onDragStart = (event: DragEvent, categoryId: number, type: 'category' | 'subcategory', subId?: number) => {
+const onDragStart = (
+    event: DragEvent,
+    categoryId: number,
+    type: 'category' | 'subcategory',
+    subId?: number
+) => {
     draggedItem.value = { categoryId, type, subId };
-    event.dataTransfer?.setData('text/plain', JSON.stringify(draggedItem.value));
+    event.dataTransfer?.setData(
+        'text/plain',
+        JSON.stringify(draggedItem.value)
+    );
 };
 
-const onDrop = (event: DragEvent, targetCategoryId: number, type: 'category' | 'subcategory', targetSubId?: number) => {
+const onDrop = (
+    event: DragEvent,
+    targetCategoryId: number,
+    type: 'category' | 'subcategory',
+    targetSubId?: number
+) => {
     event.preventDefault();
     if (!draggedItem.value) return;
 
     const { categoryId, subId } = draggedItem.value;
 
     if (type === 'category' && draggedItem.value.type === 'category') {
-        const fromIndex = categories.value.findIndex(cat => cat.id === categoryId);
-        const toIndex = categories.value.findIndex(cat => cat.id === targetCategoryId);
+        const fromIndex = categories.value.findIndex(
+            (cat) => cat.id === categoryId
+        );
+        const toIndex = categories.value.findIndex(
+            (cat) => cat.id === targetCategoryId
+        );
 
         if (fromIndex !== -1 && toIndex !== -1) {
             const [movedCategory] = categories.value.splice(fromIndex, 1);
@@ -162,14 +276,26 @@ const onDrop = (event: DragEvent, targetCategoryId: number, type: 'category' | '
                 cat.order = index + 1;
             });
         }
-    } else if (type === 'subcategory' && draggedItem.value.type === 'subcategory' && subId !== undefined && targetSubId !== undefined) {
-        const category = categories.value.find(cat => cat.id === categoryId);
+    } else if (
+        type === 'subcategory' &&
+        draggedItem.value.type === 'subcategory' &&
+        subId !== undefined &&
+        targetSubId !== undefined
+    ) {
+        const category = categories.value.find((cat) => cat.id === categoryId);
         if (category && category.sub_categories) {
-            const fromIndex = category.sub_categories.findIndex(sub => sub.id === subId);
-            const toIndex = category.sub_categories.findIndex(sub => sub.id === targetSubId);
+            const fromIndex = category.sub_categories.findIndex(
+                (sub) => sub.id === subId
+            );
+            const toIndex = category.sub_categories.findIndex(
+                (sub) => sub.id === targetSubId
+            );
 
             if (fromIndex !== -1 && toIndex !== -1) {
-                const [movedSubcategory] = category.sub_categories.splice(fromIndex, 1);
+                const [movedSubcategory] = category.sub_categories.splice(
+                    fromIndex,
+                    1
+                );
                 category.sub_categories.splice(toIndex, 0, movedSubcategory);
 
                 // Recalculate the order for all subcategories in this category
@@ -185,10 +311,17 @@ const onDrop = (event: DragEvent, targetCategoryId: number, type: 'category' | '
     draggedItem.value = null;
 };
 
+const handleEdit = () => {
+  // Your edit logic
+};
+
+const handleRemove = () => {
+  // Your remove logic
+};
 
 onMounted(() => {
     categoriesStore.fetchCategories().finally(() => {
-        categories.value = categoriesStore.categories.map(category => ({
+        categories.value = categoriesStore.categories.map((category) => ({
             ...category,
             hasOpenedSubCategories: false,
         }));
