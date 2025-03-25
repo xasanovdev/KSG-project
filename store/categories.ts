@@ -126,7 +126,7 @@ export const useCategoriesStore = defineStore('categories', {
         },
 
         // Delete category
-        async deleteCategory(categoryId: number) {
+        async deleteCategory(categoryId: string) {
             this.loading = true;
             this.error = null;
 

@@ -101,7 +101,7 @@
                                     {
                                         label: 'Remove',
                                         icon: LucideTrash,
-                                        handler: () => handleRemove(),
+                                        handler: () => handleRemove(category.id),
                                     },
                                 ]"
                             >
@@ -208,7 +208,7 @@
             v-model="warningDeleteModal"
             title="Are you sure?"
             subtitle="Do you really want to delete?"
-            @confirm="console.log('Confirm')"
+            @confirm="removeCategory"
             @cancel="warningDeleteModal = false"
         />
     </main>
@@ -225,6 +225,7 @@ const categoriesStore = useCategoriesStore();
 const categories = ref<Category[]>([]);
 
 const warningDeleteModal = ref(false)
+const selectedCategoryId = ref<string | null>(null)
 
 const actions = (action: HistoryActionEvents) => {};
 
@@ -325,18 +326,32 @@ const onDrop = (
 const handleEdit = () => {
 };
 
-const handleRemove = () => {
+const removeCategory = () => {
+    if(selectedCategoryId.value) {
+        categoriesStore.deleteCategory(selectedCategoryId.value).finally(() => {
+            selectedCategoryId.value = null
+
+            warningDeleteModal.value = false
+        })
+    }
+}
+
+const handleRemove = (id: string) => {
     warningDeleteModal.value = true;
+
+    selectedCategoryId.value = String(id)
 };
 
 onMounted(() => {
-    categoriesStore.fetchCategories().finally(() => {
-        categories.value = categoriesStore.categories.map((category) => ({
-            ...category,
-            hasOpenedSubCategories: false,
-        }));
-    });
+    categoriesStore.fetchCategories()
 });
+
+watch(() => categoriesStore.categories, () => {
+    categories.value = categoriesStore.categories.map((category) => ({
+        ...category,
+        hasOpenedSubCategories: false,
+    }));
+}, {deep: true})
 </script>
 
 <style lang="css" scoped>

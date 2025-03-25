@@ -148,7 +148,7 @@ export default defineEventHandler(async (event) => {
 
         const categories = readJsonFile(CATEGORIES_FILE);
         const filteredCategories = categories.filter(
-            (c: Category) => c.id !== categoryId
+            (c: Category) => String(c.id) !== String(categoryId)
         );
 
         writeJsonFile(CATEGORIES_FILE, filteredCategories);
