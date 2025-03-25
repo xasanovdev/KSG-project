@@ -2,12 +2,14 @@
 import { defineStore } from 'pinia';
 import type { Category, UserAction } from '~/types/categories';
 
+
 interface CategoriesState {
     categories: Category[];
     actions: UserAction[];
     loading: boolean;
     error: string | null;
 }
+
 
 export const useCategoriesStore = defineStore('categories', {
     state: (): CategoriesState => ({
