@@ -180,6 +180,8 @@ const onDrop = (event: DragEvent, targetCategoryId: number, type: 'category' | '
         }
     }
 
+    categoriesStore.reorderCategories(categories.value);
+
     draggedItem.value = null;
 };
 

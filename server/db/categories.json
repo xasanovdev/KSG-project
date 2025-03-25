@@ -18,27 +18,9 @@
     "hasOpenedSubCategories": false
   },
   {
-    "id": 2,
-    "name": "CS 2",
-    "order": 2,
-    "sub_categories": [
-      {
-        "id": 3,
-        "name": "Gloves",
-        "order": 1
-      },
-      {
-        "id": 4,
-        "name": "Knives",
-        "order": 2
-      }
-    ],
-    "hasOpenedSubCategories": false
-  },
-  {
     "id": 1,
     "name": "Dota 2",
-    "order": 3,
+    "order": 2,
     "sub_categories": [
       {
         "id": 1,
@@ -56,7 +38,7 @@
   {
     "id": 5,
     "name": "Valorant",
-    "order": 4,
+    "order": 3,
     "sub_categories": [
       {
         "id": 9,
@@ -66,6 +48,24 @@
       {
         "id": 10,
         "name": "Weapons",
+        "order": 2
+      }
+    ],
+    "hasOpenedSubCategories": false
+  },
+  {
+    "id": 2,
+    "name": "CS 2",
+    "order": 4,
+    "sub_categories": [
+      {
+        "id": 3,
+        "name": "Gloves",
+        "order": 1
+      },
+      {
+        "id": 4,
+        "name": "Knives",
         "order": 2
       }
     ],

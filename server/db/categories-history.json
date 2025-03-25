@@ -1,48 +1,6 @@
 [
   {
     "type": "create",
-    "timestamp": 1742892564710,
-    "details": {
-      "categoriesCount": 5,
-      "categoryNames": [
-        "Valorant",
-        "Dota 2",
-        "Rust",
-        "CS 2",
-        "PUBG"
-      ]
-    }
-  },
-  {
-    "type": "create",
-    "timestamp": 1742892567839,
-    "details": {
-      "categoriesCount": 5,
-      "categoryNames": [
-        "Valorant",
-        "Dota 2",
-        "Rust",
-        "CS 2",
-        "PUBG"
-      ]
-    }
-  },
-  {
-    "type": "create",
-    "timestamp": 1742892575430,
-    "details": {
-      "categoriesCount": 5,
-      "categoryNames": [
-        "Valorant",
-        "Rust",
-        "Dota 2",
-        "CS 2",
-        "PUBG"
-      ]
-    }
-  },
-  {
-    "type": "create",
     "timestamp": 1742892578685,
     "details": {
       "categoriesCount": 5,
@@ -275,6 +233,48 @@
         "CS 2",
         "Dota 2",
         "Valorant",
+        "PUBG"
+      ]
+    }
+  },
+  {
+    "type": "create",
+    "timestamp": 1742895590014,
+    "details": {
+      "categoriesCount": 5,
+      "categoryNames": [
+        "Rust",
+        "Dota 2",
+        "Valorant",
+        "PUBG",
+        "CS 2"
+      ]
+    }
+  },
+  {
+    "type": "create",
+    "timestamp": 1742895596827,
+    "details": {
+      "categoriesCount": 5,
+      "categoryNames": [
+        "CS 2",
+        "Rust",
+        "Dota 2",
+        "Valorant",
+        "PUBG"
+      ]
+    }
+  },
+  {
+    "type": "create",
+    "timestamp": 1742895611200,
+    "details": {
+      "categoriesCount": 5,
+      "categoryNames": [
+        "Rust",
+        "Dota 2",
+        "Valorant",
+        "CS 2",
         "PUBG"
       ]
     }
