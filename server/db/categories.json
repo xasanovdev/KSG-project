@@ -1,65 +1,65 @@
 [
-    {
-        "id": 4,
-        "name": "PUBG",
-        "order": 1,
-        "sub_categories": [
-            {
-                "id": 7,
-                "name": "Outfits",
-                "order": 1
-            },
-            {
-                "id": 8,
-                "name": "Guns",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 1742900718080,
+  {
+    "id": 4,
+    "name": "PUBG 2",
+    "order": 1,
+    "sub_categories": [
+      {
+        "id": 7,
+        "name": "Outfits",
+        "order": 1
+      },
+      {
+        "id": 8,
+        "name": "Guns",
+        "order": 2
+      }
+    ],
+    "hasOpenedSubCategories": false
+  },
+  {
+    "id": 1742900718080,
+    "name": "test",
+    "order": 2,
+    "sub_categories": [],
+    "hasOpenedSubCategories": false
+  },
+  {
+    "id": 3,
+    "name": "Rust",
+    "order": 3,
+    "sub_categories": [
+      {
+        "id": 5,
+        "name": "Skins",
+        "order": 2
+      }
+    ],
+    "hasOpenedSubCategories": false,
+    "subcategories": [
+      {
+        "id": 6,
+        "name": "Weapons",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "id": 1742900643769,
+    "name": "Bolad goood",
+    "order": 4,
+    "sub_categories": [
+      {
+        "id": 1742900648208,
         "name": "test",
-        "order": 2,
-        "sub_categories": [],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 3,
-        "name": "Rust",
-        "order": 3,
-        "sub_categories": [
-            {
-                "id": 5,
-                "name": "Skins",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false,
-        "subcategories": [
-            {
-                "id": 6,
-                "name": "Weapons",
-                "order": 1
-            }
-        ]
-    },
-    {
-        "id": 1742900643769,
-        "name": "Bolad goood",
-        "order": 4,
-        "sub_categories": [
-            {
-                "id": 1742900648208,
-                "name": "test",
-                "order": 1
-            },
-            {
-                "id": 1742900649317,
-                "name": "test",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    }
+        "order": 1
+      },
+      {
+        "id": 1742900649317,
+        "name": "test",
+        "order": 2
+      }
+    ],
+    "hasOpenedSubCategories": false
+  }
 ]

@@ -74,7 +74,6 @@
 import { useCategoriesStore } from '~/store/categories';
 import type { Category } from '~/types/categories';
 import type { HistoryActionEvents } from '~/types/common';
-import formatList from '~/utils/common';
 
 const categoriesStore = useCategoriesStore();
 const categories = ref<Category[]>([]);
@@ -178,7 +177,9 @@ const handleEdit = (category: Category) => {
 };
 
 const updateCategory = (category: Category) => {
-    categoriesStore.updateCategory(category.id, category);
+    categoriesStore.updateCategory(category.id, category).finally(() => {
+        showEditModal.value = false;
+    })
 };
 
 const removeCategory = () => {
