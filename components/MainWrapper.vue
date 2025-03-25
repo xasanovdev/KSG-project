@@ -202,6 +202,15 @@
                 </div>
             </div>
         </section>
+
+
+        <CommonWarningModal
+            v-model="warningDeleteModal"
+            title="Are you sure?"
+            subtitle="Do you really want to delete?"
+            @confirm="console.log('Confirm')"
+            @cancel="warningDeleteModal = false"
+        />
     </main>
 </template>
 
@@ -214,6 +223,8 @@ import formatList from '~/utils/common';
 
 const categoriesStore = useCategoriesStore();
 const categories = ref<Category[]>([]);
+
+const warningDeleteModal = ref(false)
 
 const actions = (action: HistoryActionEvents) => {};
 
@@ -312,11 +323,10 @@ const onDrop = (
 };
 
 const handleEdit = () => {
-  // Your edit logic
 };
 
 const handleRemove = () => {
-  // Your remove logic
+    warningDeleteModal.value = true;
 };
 
 onMounted(() => {
