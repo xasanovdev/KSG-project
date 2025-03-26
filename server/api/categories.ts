@@ -20,8 +20,8 @@ interface UserAction {
     details: any;
 }
 
-const CATEGORIES_FILE = path.resolve('server/db/categories.json');
-const ACTIONS_HISTORY_FILE = path.resolve('server/db/categories-history.json');
+const CATEGORIES_FILE = path.resolve('data/categories.json');
+const ACTIONS_HISTORY_FILE = path.resolve('data/categories-history.json');
 
 export default defineEventHandler(async (event) => {
     const method = event.method;

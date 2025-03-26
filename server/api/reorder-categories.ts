@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { Category } from '~/types/categories';
 
-const CATEGORIES_FILE = path.resolve('server/db/categories.json');
+const CATEGORIES_FILE = path.resolve('data/categories.json');
 
 const readJsonFile = (filePath: string) => {
     try {
