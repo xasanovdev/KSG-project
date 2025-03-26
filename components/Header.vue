@@ -35,7 +35,7 @@ const handleSave = (category: Category) => {
         </div>
 
         <div class="header__actions">
-            <CommonButton
+            <!-- <CommonButton
                 variant="secondary"
                 size="sm"
                 @click="emits('action', HistoryActionEvents.UNDO)"
@@ -51,7 +51,7 @@ const handleSave = (category: Category) => {
                 square
             >
                 <LucideArrowRight :size="16" />
-            </CommonButton>
+            </CommonButton> -->
             <CommonButton variant="primary" size="sm" @click="showModal = true">
                 <LucidePlus :size="16" />
                 Add
