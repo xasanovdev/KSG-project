@@ -90,7 +90,7 @@ watch(
 
             <!-- Actions -->
             <div class="edit__actions">
-                <CommonButton type="primary" @click="$emit('cancel')">
+                <CommonButton type="primary" @click.stop="$emit('cancel')">
                     Cancel
                 </CommonButton>
                 <CommonButton type="success" @click="$emit('save', formData)">

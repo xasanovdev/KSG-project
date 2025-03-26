@@ -157,7 +157,7 @@ export const useCategoriesStore = defineStore('categories', {
                 });
 
                 // Refetch categories instead of manually filtering
-                await this.fetchCategories();
+                await this.fetchCategories(this.categoriesPaginationData.page);
             } catch (error) {
                 this.error =
                     error instanceof Error
