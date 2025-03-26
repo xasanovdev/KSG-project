@@ -9,14 +9,14 @@
   {
     "id": 1742968710418,
     "name": "dsg",
-    "order": 1,
+    "order": 2,
     "sub_categories": [],
     "hasOpenedSubCategories": false
   },
   {
     "id": 1742967323942,
     "name": "test4",
-    "order": 1,
+    "order": 3,
     "sub_categories": [
       {
         "id": 1742968629484,
@@ -29,49 +29,49 @@
   {
     "id": 1742967144722,
     "name": "test",
-    "order": 1,
+    "order": 4,
     "sub_categories": [],
     "hasOpenedSubCategories": false
   },
   {
     "id": 1742967144722,
     "name": "test",
-    "order": 1,
+    "order": 5,
     "sub_categories": [],
     "hasOpenedSubCategories": false
   },
   {
     "id": 1742967144722,
     "name": "test",
-    "order": 1,
+    "order": 6,
     "sub_categories": [],
     "hasOpenedSubCategories": false
   },
   {
     "id": 1742967120384,
     "name": "test",
-    "order": 1,
+    "order": 7,
     "sub_categories": [],
     "hasOpenedSubCategories": false
   },
   {
     "id": 1742967018352,
     "name": "test",
-    "order": 1,
+    "order": 8,
     "sub_categories": [],
     "hasOpenedSubCategories": false
   },
   {
     "id": 1742966939454,
     "name": "test",
-    "order": 1,
+    "order": 9,
     "sub_categories": [],
     "hasOpenedSubCategories": false
   },
   {
     "id": 7,
     "name": "League of Legends",
-    "order": 1,
+    "order": 10,
     "sub_categories": [
       {
         "id": 701,
@@ -94,7 +94,7 @@
   {
     "id": 9,
     "name": "Genshin Impact",
-    "order": 2,
+    "order": 11,
     "sub_categories": [
       {
         "id": 901,
@@ -117,7 +117,7 @@
   {
     "id": 8,
     "name": "Overwatch 2",
-    "order": 3,
+    "order": 12,
     "sub_categories": [
       {
         "id": 801,
@@ -135,7 +135,7 @@
   {
     "id": 6,
     "name": "Valorant",
-    "order": 4,
+    "order": 13,
     "sub_categories": [
       {
         "id": 602,
@@ -153,7 +153,7 @@
   {
     "id": 10,
     "name": "Counter-Strike 2",
-    "order": 5,
+    "order": 14,
     "sub_categories": [
       {
         "id": 1001,
@@ -171,7 +171,7 @@
   {
     "id": 11,
     "name": "Dota 2",
-    "order": 6,
+    "order": 15,
     "sub_categories": [
       {
         "id": 1101,
@@ -189,7 +189,7 @@
   {
     "id": 12,
     "name": "Rocket League",
-    "order": 7,
+    "order": 16,
     "sub_categories": [
       {
         "id": 1201,
@@ -212,7 +212,7 @@
   {
     "id": 13,
     "name": "FIFA 23",
-    "order": 8,
+    "order": 17,
     "sub_categories": [
       {
         "id": 1301,
@@ -230,7 +230,7 @@
   {
     "id": 15,
     "name": "Among Us",
-    "order": 9,
+    "order": 18,
     "sub_categories": [
       {
         "id": 1501,
@@ -253,7 +253,7 @@
   {
     "id": 16,
     "name": "Genshin Impact",
-    "order": 10,
+    "order": 19,
     "sub_categories": [
       {
         "id": 901,
@@ -276,7 +276,7 @@
   {
     "id": 14,
     "name": "NBA 2K23",
-    "order": 11,
+    "order": 20,
     "sub_categories": [
       {
         "id": 1402,
@@ -294,7 +294,7 @@
   {
     "id": 17,
     "name": "Valorant",
-    "order": 12,
+    "order": 21,
     "sub_categories": [
       {
         "id": 601,
@@ -312,7 +312,7 @@
   {
     "id": 18,
     "name": "Overwatch 2",
-    "order": 13,
+    "order": 22,
     "sub_categories": [
       {
         "id": 801,
@@ -330,7 +330,7 @@
   {
     "id": 19,
     "name": "League of Legends",
-    "order": 14,
+    "order": 23,
     "sub_categories": [
       {
         "id": 701,
@@ -353,7 +353,7 @@
   {
     "id": 20,
     "name": "Valorant",
-    "order": 15,
+    "order": 24,
     "sub_categories": [
       {
         "id": 601,
@@ -371,7 +371,7 @@
   {
     "id": 21,
     "name": "Genshin Impact",
-    "order": 16,
+    "order": 25,
     "sub_categories": [
       {
         "id": 901,
@@ -394,7 +394,7 @@
   {
     "id": 22,
     "name": "Overwatch 2",
-    "order": 17,
+    "order": 26,
     "sub_categories": [
       {
         "id": 801,
@@ -412,7 +412,7 @@
   {
     "id": 23,
     "name": "League of Legends",
-    "order": 18,
+    "order": 27,
     "sub_categories": [
       {
         "id": 701,
@@ -435,7 +435,7 @@
   {
     "id": 24,
     "name": "Genshin Impact",
-    "order": 19,
+    "order": 28,
     "sub_categories": [
       {
         "id": 901,
@@ -458,7 +458,7 @@
   {
     "id": 25,
     "name": "Valorant",
-    "order": 20,
+    "order": 29,
     "sub_categories": [
       {
         "id": 601,
@@ -476,7 +476,7 @@
   {
     "id": 26,
     "name": "Overwatch 2",
-    "order": 21,
+    "order": 30,
     "sub_categories": [
       {
         "id": 801,
@@ -494,7 +494,7 @@
   {
     "id": 27,
     "name": "League of Legends",
-    "order": 22,
+    "order": 31,
     "sub_categories": [
       {
         "id": 701,
@@ -517,7 +517,7 @@
   {
     "id": 28,
     "name": "Genshin Impact",
-    "order": 23,
+    "order": 32,
     "sub_categories": [
       {
         "id": 901,
@@ -540,7 +540,7 @@
   {
     "id": 29,
     "name": "Valorant",
-    "order": 24,
+    "order": 33,
     "sub_categories": [
       {
         "id": 601,
@@ -558,7 +558,7 @@
   {
     "id": 30,
     "name": "Overwatch 2",
-    "order": 25,
+    "order": 34,
     "sub_categories": [
       {
         "id": 801,
@@ -576,7 +576,7 @@
   {
     "id": 31,
     "name": "League of Legends",
-    "order": 26,
+    "order": 35,
     "sub_categories": [
       {
         "id": 701,
@@ -599,7 +599,7 @@
   {
     "id": 32,
     "name": "Overwatch 2",
-    "order": 27,
+    "order": 36,
     "sub_categories": [
       {
         "id": 801,
@@ -617,7 +617,7 @@
   {
     "id": 33,
     "name": "League of Legends",
-    "order": 28,
+    "order": 37,
     "sub_categories": [
       {
         "id": 701,
@@ -640,7 +640,7 @@
   {
     "id": 34,
     "name": "Genshin Impact",
-    "order": 29,
+    "order": 38,
     "sub_categories": [
       {
         "id": 901,
@@ -663,7 +663,7 @@
   {
     "id": 35,
     "name": "Valorant",
-    "order": 30,
+    "order": 39,
     "sub_categories": [
       {
         "id": 601,
@@ -681,7 +681,7 @@
   {
     "id": 36,
     "name": "Overwatch 2",
-    "order": 31,
+    "order": 40,
     "sub_categories": [
       {
         "id": 801,
@@ -699,7 +699,7 @@
   {
     "id": 37,
     "name": "League of Legends",
-    "order": 32,
+    "order": 41,
     "sub_categories": [
       {
         "id": 701,
@@ -722,7 +722,7 @@
   {
     "id": 38,
     "name": "Genshin Impact",
-    "order": 33,
+    "order": 42,
     "sub_categories": [
       {
         "id": 901,
@@ -745,7 +745,7 @@
   {
     "id": 39,
     "name": "Valorant",
-    "order": 34,
+    "order": 43,
     "sub_categories": [
       {
         "id": 601,
@@ -763,7 +763,7 @@
   {
     "id": 40,
     "name": "Valorant",
-    "order": 35,
+    "order": 44,
     "sub_categories": [
       {
         "id": 601,
@@ -779,9 +779,32 @@
     "hasOpenedSubCategories": false
   },
   {
+    "id": 43,
+    "name": "Genshin Impact",
+    "order": 45,
+    "sub_categories": [
+      {
+        "id": 901,
+        "name": "Characters",
+        "order": 1
+      },
+      {
+        "id": 902,
+        "name": "Weapons",
+        "order": 2
+      },
+      {
+        "id": 903,
+        "name": "Artifacts",
+        "order": 3
+      }
+    ],
+    "hasOpenedSubCategories": false
+  },
+  {
     "id": 41,
     "name": "League of Legends",
-    "order": 36,
+    "order": 46,
     "sub_categories": [
       {
         "id": 701,
@@ -804,7 +827,7 @@
   {
     "id": 42,
     "name": "Overwatch 2",
-    "order": 37,
+    "order": 47,
     "sub_categories": [
       {
         "id": 801,
@@ -815,29 +838,6 @@
         "id": 802,
         "name": "Skins",
         "order": 2
-      }
-    ],
-    "hasOpenedSubCategories": false
-  },
-  {
-    "id": 43,
-    "name": "Genshin Impact",
-    "order": 38,
-    "sub_categories": [
-      {
-        "id": 901,
-        "name": "Characters",
-        "order": 1
-      },
-      {
-        "id": 902,
-        "name": "Weapons",
-        "order": 2
-      },
-      {
-        "id": 903,
-        "name": "Artifacts",
-        "order": 3
       }
     ],
     "hasOpenedSubCategories": false

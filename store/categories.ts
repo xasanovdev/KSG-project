@@ -20,7 +20,7 @@ export const useCategoriesStore = defineStore('categories', {
         categories: [],
         categoriesPaginationData: {
             page: 1,
-            limit: 4,
+            limit: 10,
             total: 0,
             totalPages: 1,
         },
