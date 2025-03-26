@@ -1,9 +1,15 @@
 [
   {
     "id": 1742967323942,
-    "name": "test1",
+    "name": "test4",
     "order": 1,
-    "sub_categories": [],
+    "sub_categories": [
+      {
+        "id": 1742968629484,
+        "name": "test",
+        "order": 1
+      }
+    ],
     "hasOpenedSubCategories": false
   },
   {

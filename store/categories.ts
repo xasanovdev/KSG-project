@@ -122,18 +122,18 @@ export const useCategoriesStore = defineStore('categories', {
         },
 
         // Update existing category
-        async updateCategory(categoryId: number, updates: Partial<Category>) {
+        async updateCategory(categoryId: number, category: Category) {
             this.loading = true;
             this.error = null;
 
             try {
                 await $fetch('/api/categories', {
                     method: 'PUT',
-                    body: { categoryId, updates },
+                    body: { categoryId, category },
                 });
 
                 // Refetch categories instead of manually updating
-                await this.fetchCategories();
+                await this.fetchCategories(this.categoriesPaginationData.page);
             } catch (error) {
                 this.error =
                     error instanceof Error
