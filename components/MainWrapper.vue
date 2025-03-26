@@ -89,7 +89,7 @@ const categoriesStore = useCategoriesStore();
 
 const categories = ref<Category[]>([]);
 
-const currentPage = ref(7);
+const currentPage = ref(1);
 
 const paginationList = computed(() =>
     generatePaginationData(
@@ -158,7 +158,7 @@ const onDragStart = (
     );
 };
 
-const onDrop = (
+const onDrop = async (
     event: DragEvent,
     targetCategoryId: number,
     type: 'category' | 'subcategory',
@@ -167,52 +167,30 @@ const onDrop = (
     event.preventDefault();
     if (!draggedItem.value) return;
 
-    const { categoryId, subId } = draggedItem.value;
-
-    if (type === 'category' && draggedItem.value.type === 'category') {
-        const fromIndex = categories.value.findIndex(
-            (cat) => cat.id === categoryId
-        );
-        const toIndex = categories.value.findIndex(
-            (cat) => cat.id === targetCategoryId
-        );
-
-        if (fromIndex !== -1 && toIndex !== -1) {
-            const [movedCategory] = categories.value.splice(fromIndex, 1);
-            categories.value.splice(toIndex, 0, movedCategory);
-            categories.value.forEach((cat, index) => (cat.order = index + 1));
-        }
-    } else if (
-        type === 'subcategory' &&
-        draggedItem.value.type === 'subcategory' &&
-        subId !== undefined &&
-        targetSubId !== undefined
-    ) {
-        const category = categories.value.find((cat) => cat.id === categoryId);
-        if (category && category.sub_categories) {
-            const fromIndex = category.sub_categories.findIndex(
-                (sub) => sub.id === subId
-            );
-            const toIndex = category.sub_categories.findIndex(
-                (sub) => sub.id === targetSubId
-            );
-
-            if (fromIndex !== -1 && toIndex !== -1) {
-                const [movedSubcategory] = category.sub_categories.splice(
-                    fromIndex,
-                    1
-                );
-                category.sub_categories.splice(toIndex, 0, movedSubcategory);
-                category.sub_categories.forEach(
-                    (sub, index) => (sub.order = index + 1)
-                );
+    try {
+        const response = await $fetch('/api/reorder-categories', {
+            method: 'POST',
+            body: {
+                draggedItem: draggedItem.value,
+                targetCategoryId,
+                type,
+                targetSubId
             }
+        });
+
+        if (response.success) {
+            console.log(response.message);
+            // Optionally refresh data
         }
+    } catch (error) {
+        console.error('Error reordering:', error);
+    } finally {
+        categoriesStore.fetchCategories(currentPage.value);
     }
 
-    categoriesStore.reorderCategories(categories.value);
     draggedItem.value = null;
 };
+
 
 const handleEdit = (category: Category) => {
     selectedCategory.value = category;

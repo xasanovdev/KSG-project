@@ -20,7 +20,7 @@ export const useCategoriesStore = defineStore('categories', {
         categories: [],
         categoriesPaginationData: {
             page: 1,
-            limit: 10,
+            limit: 4,
             total: 0,
             totalPages: 1,
         },
@@ -181,7 +181,7 @@ export const useCategoriesStore = defineStore('categories', {
                 });
 
                 // Refetch categories instead of manually updating
-                await this.fetchCategories();
+                await this.fetchCategories(this.categoriesPaginationData.page);
             } catch (error) {
                 this.error =
                     error instanceof Error

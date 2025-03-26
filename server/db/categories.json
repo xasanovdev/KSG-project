@@ -1,3032 +1,776 @@
 [
-    {
-        "id": 1,
-        "name": "Fortnite",
-        "order": 1,
-        "sub_categories": [
-            {
-                "id": 102,
-                "name": "Emotes",
-                "order": 2
-            },
-            {
-                "id": 103,
-                "name": "Pickaxes",
-                "order": 3
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 2,
-        "name": "Call of Duty: Warzone",
-        "order": 2,
-        "sub_categories": [
-            {
-                "id": 201,
-                "name": "Weapons",
-                "order": 1
-            },
-            {
-                "id": 202,
-                "name": "Operators",
-                "order": 2
-            },
-            {
-                "id": 203,
-                "name": "Loadouts",
-                "order": 3
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 3,
-        "name": "Apex Legends",
-        "order": 3,
-        "sub_categories": [
-            {
-                "id": 301,
-                "name": "Legends",
-                "order": 1
-            },
-            {
-                "id": 302,
-                "name": "Weapon Skins",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 4,
-        "name": "PUBG",
-        "order": 4,
-        "sub_categories": [
-            {
-                "id": 401,
-                "name": "Outfits",
-                "order": 1
-            },
-            {
-                "id": 403,
-                "name": "Vehicles",
-                "order": 2
-            },
-            {
-                "id": 402,
-                "name": "Guns",
-                "order": 3
-            }
-        ],
-        "hasOpenedSubCategories": true
-    },
-    {
-        "id": 5,
-        "name": "Minecraft",
-        "order": 5,
-        "sub_categories": [
-            {
-                "id": 501,
-                "name": "Blocks",
-                "order": 1
-            },
-            {
-                "id": 502,
-                "name": "Tools",
-                "order": 2
-            },
-            {
-                "id": 503,
-                "name": "Mobs",
-                "order": 3
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 6,
-        "name": "Valorant",
-        "order": 6,
-        "sub_categories": [
-            {
-                "id": 601,
-                "name": "Agents",
-                "order": 1
-            },
-            {
-                "id": 602,
-                "name": "Weapon Skins",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 7,
-        "name": "League of Legends",
-        "order": 7,
-        "sub_categories": [
-            {
-                "id": 701,
-                "name": "Champions",
-                "order": 1
-            },
-            {
-                "id": 702,
-                "name": "Skins",
-                "order": 2
-            },
-            {
-                "id": 703,
-                "name": "Runes",
-                "order": 3
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 8,
-        "name": "Overwatch 2",
-        "order": 8,
-        "sub_categories": [
-            {
-                "id": 801,
-                "name": "Heroes",
-                "order": 1
-            },
-            {
-                "id": 802,
-                "name": "Skins",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 9,
-        "name": "Genshin Impact",
-        "order": 9,
-        "sub_categories": [
-            {
-                "id": 901,
-                "name": "Characters",
-                "order": 1
-            },
-            {
-                "id": 902,
-                "name": "Weapons",
-                "order": 2
-            },
-            {
-                "id": 903,
-                "name": "Artifacts",
-                "order": 3
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 10,
-        "name": "Counter-Strike 2",
-        "order": 10,
-        "sub_categories": [
-            {
-                "id": 1001,
-                "name": "Skins",
-                "order": 1
-            },
-            {
-                "id": 1002,
-                "name": "Maps",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 11,
-        "name": "Dota 2",
-        "order": 11,
-        "sub_categories": [
-            {
-                "id": 1101,
-                "name": "Heroes",
-                "order": 1
-            },
-            {
-                "id": 1102,
-                "name": "Items",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 12,
-        "name": "Rocket League",
-        "order": 12,
-        "sub_categories": [
-            {
-                "id": 1201,
-                "name": "Cars",
-                "order": 1
-            },
-            {
-                "id": 1202,
-                "name": "Decals",
-                "order": 2
-            },
-            {
-                "id": 1203,
-                "name": "Wheels",
-                "order": 3
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 13,
-        "name": "FIFA 23",
-        "order": 13,
-        "sub_categories": [
-            {
-                "id": 1301,
-                "name": "Players",
-                "order": 1
-            },
-            {
-                "id": 1302,
-                "name": "Teams",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 14,
-        "name": "NBA 2K23",
-        "order": 14,
-        "sub_categories": [
-            {
-                "id": 1401,
-                "name": "Players",
-                "order": 1
-            },
-            {
-                "id": 1402,
-                "name": "Teams",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 15,
-        "name": "Among Us",
-        "order": 15,
-        "sub_categories": [
-            {
-                "id": 1501,
-                "name": "Skins",
-                "order": 1
-            },
-            {
-                "id": 1502,
-                "name": "Hats",
-                "order": 2
-            },
-            {
-                "id": 1503,
-                "name": "Pets",
-                "order": 3
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 16,
-        "name": "Roblox",
-        "order": 16,
-        "sub_categories": [
-            {
-                "id": 1601,
-                "name": "Avatars",
-                "order": 1
-            },
-            {
-                "id": 1602,
-                "name": "Games",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 17,
-        "name": "World of Warcraft",
-        "order": 17,
-        "sub_categories": [
-            {
-                "id": 1701,
-                "name": "Classes",
-                "order": 1
-            },
-            {
-                "id": 1702,
-                "name": "Mounts",
-                "order": 2
-            },
-            {
-                "id": 1703,
-                "name": "Gear",
-                "order": 3
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 18,
-        "name": "Destiny 2",
-        "order": 18,
-        "sub_categories": [
-            {
-                "id": 1801,
-                "name": "Classes",
-                "order": 1
-            },
-            {
-                "id": 1802,
-                "name": "Weapons",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 19,
-        "name": "Hearthstone",
-        "order": 19,
-        "sub_categories": [
-            {
-                "id": 1901,
-                "name": "Cards",
-                "order": 1
-            },
-            {
-                "id": 1902,
-                "name": "Decks",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 20,
-        "name": "The Sims 4",
-        "order": 20,
-        "sub_categories": [
-            {
-                "id": 2001,
-                "name": "Clothing",
-                "order": 1
-            },
-            {
-                "id": 2002,
-                "name": "Furniture",
-                "order": 2
-            },
-            {
-                "id": 2003,
-                "name": "Traits",
-                "order": 3
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 21,
-        "name": "Elden Ring",
-        "order": 21,
-        "sub_categories": [
-            {
-                "id": 2101,
-                "name": "Weapons",
-                "order": 1
-            },
-            {
-                "id": 2102,
-                "name": "Armor",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 22,
-        "name": "Cyberpunk 2077",
-        "order": 22,
-        "sub_categories": [
-            {
-                "id": 2201,
-                "name": "Weapons",
-                "order": 1
-            },
-            {
-                "id": 2202,
-                "name": "Cyberware",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 23,
-        "name": "Animal Crossing",
-        "order": 23,
-        "sub_categories": [
-            {
-                "id": 2301,
-                "name": "Furniture",
-                "order": 1
-            },
-            {
-                "id": 2302,
-                "name": "Clothing",
-                "order": 2
-            },
-            {
-                "id": 2303,
-                "name": "Villagers",
-                "order": 3
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 24,
-        "name": "Stardew Valley",
-        "order": 24,
-        "sub_categories": [
-            {
-                "id": 2401,
-                "name": "Crops",
-                "order": 1
-            },
-            {
-                "id": 2402,
-                "name": "Animals",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 25,
-        "name": "Grand Theft Auto V",
-        "order": 25,
-        "sub_categories": [
-            {
-                "id": 2501,
-                "name": "Vehicles",
-                "order": 1
-            },
-            {
-                "id": 2502,
-                "name": "Weapons",
-                "order": 2
-            },
-            {
-                "id": 2503,
-                "name": "Properties",
-                "order": 3
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 1,
-        "name": "Fortnite",
-        "order": 1,
-        "sub_categories": [
-            {
-                "id": 102,
-                "name": "Emotes",
-                "order": 2
-            },
-            {
-                "id": 103,
-                "name": "Pickaxes",
-                "order": 3
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 2,
-        "name": "Call of Duty: Warzone",
-        "order": 2,
-        "sub_categories": [
-            {
-                "id": 201,
-                "name": "Weapons",
-                "order": 1
-            },
-            {
-                "id": 202,
-                "name": "Operators",
-                "order": 2
-            },
-            {
-                "id": 203,
-                "name": "Loadouts",
-                "order": 3
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 3,
-        "name": "Apex Legends",
-        "order": 3,
-        "sub_categories": [
-            {
-                "id": 301,
-                "name": "Legends",
-                "order": 1
-            },
-            {
-                "id": 302,
-                "name": "Weapon Skins",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 4,
-        "name": "PUBG",
-        "order": 4,
-        "sub_categories": [
-            {
-                "id": 401,
-                "name": "Outfits",
-                "order": 1
-            },
-            {
-                "id": 403,
-                "name": "Vehicles",
-                "order": 2
-            },
-            {
-                "id": 402,
-                "name": "Guns",
-                "order": 3
-            }
-        ],
-        "hasOpenedSubCategories": true
-    },
-    {
-        "id": 5,
-        "name": "Minecraft",
-        "order": 5,
-        "sub_categories": [
-            {
-                "id": 501,
-                "name": "Blocks",
-                "order": 1
-            },
-            {
-                "id": 502,
-                "name": "Tools",
-                "order": 2
-            },
-            {
-                "id": 503,
-                "name": "Mobs",
-                "order": 3
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 6,
-        "name": "Valorant",
-        "order": 6,
-        "sub_categories": [
-            {
-                "id": 601,
-                "name": "Agents",
-                "order": 1
-            },
-            {
-                "id": 602,
-                "name": "Weapon Skins",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 7,
-        "name": "League of Legends",
-        "order": 7,
-        "sub_categories": [
-            {
-                "id": 701,
-                "name": "Champions",
-                "order": 1
-            },
-            {
-                "id": 702,
-                "name": "Skins",
-                "order": 2
-            },
-            {
-                "id": 703,
-                "name": "Runes",
-                "order": 3
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 8,
-        "name": "Overwatch 2",
-        "order": 8,
-        "sub_categories": [
-            {
-                "id": 801,
-                "name": "Heroes",
-                "order": 1
-            },
-            {
-                "id": 802,
-                "name": "Skins",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 9,
-        "name": "Genshin Impact",
-        "order": 9,
-        "sub_categories": [
-            {
-                "id": 901,
-                "name": "Characters",
-                "order": 1
-            },
-            {
-                "id": 902,
-                "name": "Weapons",
-                "order": 2
-            },
-            {
-                "id": 903,
-                "name": "Artifacts",
-                "order": 3
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 10,
-        "name": "Counter-Strike 2",
-        "order": 10,
-        "sub_categories": [
-            {
-                "id": 1001,
-                "name": "Skins",
-                "order": 1
-            },
-            {
-                "id": 1002,
-                "name": "Maps",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 11,
-        "name": "Dota 2",
-        "order": 11,
-        "sub_categories": [
-            {
-                "id": 1101,
-                "name": "Heroes",
-                "order": 1
-            },
-            {
-                "id": 1102,
-                "name": "Items",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 12,
-        "name": "Rocket League",
-        "order": 12,
-        "sub_categories": [
-            {
-                "id": 1201,
-                "name": "Cars",
-                "order": 1
-            },
-            {
-                "id": 1202,
-                "name": "Decals",
-                "order": 2
-            },
-            {
-                "id": 1203,
-                "name": "Wheels",
-                "order": 3
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 13,
-        "name": "FIFA 23",
-        "order": 13,
-        "sub_categories": [
-            {
-                "id": 1301,
-                "name": "Players",
-                "order": 1
-            },
-            {
-                "id": 1302,
-                "name": "Teams",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 14,
-        "name": "NBA 2K23",
-        "order": 14,
-        "sub_categories": [
-            {
-                "id": 1401,
-                "name": "Players",
-                "order": 1
-            },
-            {
-                "id": 1402,
-                "name": "Teams",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 15,
-        "name": "Among Us",
-        "order": 15,
-        "sub_categories": [
-            {
-                "id": 1501,
-                "name": "Skins",
-                "order": 1
-            },
-            {
-                "id": 1502,
-                "name": "Hats",
-                "order": 2
-            },
-            {
-                "id": 1503,
-                "name": "Pets",
-                "order": 3
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 16,
-        "name": "Roblox",
-        "order": 16,
-        "sub_categories": [
-            {
-                "id": 1601,
-                "name": "Avatars",
-                "order": 1
-            },
-            {
-                "id": 1602,
-                "name": "Games",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 17,
-        "name": "World of Warcraft",
-        "order": 17,
-        "sub_categories": [
-            {
-                "id": 1701,
-                "name": "Classes",
-                "order": 1
-            },
-            {
-                "id": 1702,
-                "name": "Mounts",
-                "order": 2
-            },
-            {
-                "id": 1703,
-                "name": "Gear",
-                "order": 3
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 18,
-        "name": "Destiny 2",
-        "order": 18,
-        "sub_categories": [
-            {
-                "id": 1801,
-                "name": "Classes",
-                "order": 1
-            },
-            {
-                "id": 1802,
-                "name": "Weapons",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 19,
-        "name": "Hearthstone",
-        "order": 19,
-        "sub_categories": [
-            {
-                "id": 1901,
-                "name": "Cards",
-                "order": 1
-            },
-            {
-                "id": 1902,
-                "name": "Decks",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 20,
-        "name": "The Sims 4",
-        "order": 20,
-        "sub_categories": [
-            {
-                "id": 2001,
-                "name": "Clothing",
-                "order": 1
-            },
-            {
-                "id": 2002,
-                "name": "Furniture",
-                "order": 2
-            },
-            {
-                "id": 2003,
-                "name": "Traits",
-                "order": 3
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 21,
-        "name": "Elden Ring",
-        "order": 21,
-        "sub_categories": [
-            {
-                "id": 2101,
-                "name": "Weapons",
-                "order": 1
-            },
-            {
-                "id": 2102,
-                "name": "Armor",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 22,
-        "name": "Cyberpunk 2077",
-        "order": 22,
-        "sub_categories": [
-            {
-                "id": 2201,
-                "name": "Weapons",
-                "order": 1
-            },
-            {
-                "id": 2202,
-                "name": "Cyberware",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 23,
-        "name": "Animal Crossing",
-        "order": 23,
-        "sub_categories": [
-            {
-                "id": 2301,
-                "name": "Furniture",
-                "order": 1
-            },
-            {
-                "id": 2302,
-                "name": "Clothing",
-                "order": 2
-            },
-            {
-                "id": 2303,
-                "name": "Villagers",
-                "order": 3
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 24,
-        "name": "Stardew Valley",
-        "order": 24,
-        "sub_categories": [
-            {
-                "id": 2401,
-                "name": "Crops",
-                "order": 1
-            },
-            {
-                "id": 2402,
-                "name": "Animals",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 25,
-        "name": "Grand Theft Auto V",
-        "order": 25,
-        "sub_categories": [
-            {
-                "id": 2501,
-                "name": "Vehicles",
-                "order": 1
-            },
-            {
-                "id": 2502,
-                "name": "Weapons",
-                "order": 2
-            },
-            {
-                "id": 2503,
-                "name": "Properties",
-                "order": 3
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 1,
-        "name": "Fortnite",
-        "order": 1,
-        "sub_categories": [
-            {
-                "id": 102,
-                "name": "Emotes",
-                "order": 2
-            },
-            {
-                "id": 103,
-                "name": "Pickaxes",
-                "order": 3
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 2,
-        "name": "Call of Duty: Warzone",
-        "order": 2,
-        "sub_categories": [
-            {
-                "id": 201,
-                "name": "Weapons",
-                "order": 1
-            },
-            {
-                "id": 202,
-                "name": "Operators",
-                "order": 2
-            },
-            {
-                "id": 203,
-                "name": "Loadouts",
-                "order": 3
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 3,
-        "name": "Apex Legends",
-        "order": 3,
-        "sub_categories": [
-            {
-                "id": 301,
-                "name": "Legends",
-                "order": 1
-            },
-            {
-                "id": 302,
-                "name": "Weapon Skins",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 4,
-        "name": "PUBG",
-        "order": 4,
-        "sub_categories": [
-            {
-                "id": 401,
-                "name": "Outfits",
-                "order": 1
-            },
-            {
-                "id": 403,
-                "name": "Vehicles",
-                "order": 2
-            },
-            {
-                "id": 402,
-                "name": "Guns",
-                "order": 3
-            }
-        ],
-        "hasOpenedSubCategories": true
-    },
-    {
-        "id": 5,
-        "name": "Minecraft",
-        "order": 5,
-        "sub_categories": [
-            {
-                "id": 501,
-                "name": "Blocks",
-                "order": 1
-            },
-            {
-                "id": 502,
-                "name": "Tools",
-                "order": 2
-            },
-            {
-                "id": 503,
-                "name": "Mobs",
-                "order": 3
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 6,
-        "name": "Valorant",
-        "order": 6,
-        "sub_categories": [
-            {
-                "id": 601,
-                "name": "Agents",
-                "order": 1
-            },
-            {
-                "id": 602,
-                "name": "Weapon Skins",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 7,
-        "name": "League of Legends",
-        "order": 7,
-        "sub_categories": [
-            {
-                "id": 701,
-                "name": "Champions",
-                "order": 1
-            },
-            {
-                "id": 702,
-                "name": "Skins",
-                "order": 2
-            },
-            {
-                "id": 703,
-                "name": "Runes",
-                "order": 3
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 8,
-        "name": "Overwatch 2",
-        "order": 8,
-        "sub_categories": [
-            {
-                "id": 801,
-                "name": "Heroes",
-                "order": 1
-            },
-            {
-                "id": 802,
-                "name": "Skins",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 9,
-        "name": "Genshin Impact",
-        "order": 9,
-        "sub_categories": [
-            {
-                "id": 901,
-                "name": "Characters",
-                "order": 1
-            },
-            {
-                "id": 902,
-                "name": "Weapons",
-                "order": 2
-            },
-            {
-                "id": 903,
-                "name": "Artifacts",
-                "order": 3
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 10,
-        "name": "Counter-Strike 2",
-        "order": 10,
-        "sub_categories": [
-            {
-                "id": 1001,
-                "name": "Skins",
-                "order": 1
-            },
-            {
-                "id": 1002,
-                "name": "Maps",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 11,
-        "name": "Dota 2",
-        "order": 11,
-        "sub_categories": [
-            {
-                "id": 1101,
-                "name": "Heroes",
-                "order": 1
-            },
-            {
-                "id": 1102,
-                "name": "Items",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 12,
-        "name": "Rocket League",
-        "order": 12,
-        "sub_categories": [
-            {
-                "id": 1201,
-                "name": "Cars",
-                "order": 1
-            },
-            {
-                "id": 1202,
-                "name": "Decals",
-                "order": 2
-            },
-            {
-                "id": 1203,
-                "name": "Wheels",
-                "order": 3
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 13,
-        "name": "FIFA 23",
-        "order": 13,
-        "sub_categories": [
-            {
-                "id": 1301,
-                "name": "Players",
-                "order": 1
-            },
-            {
-                "id": 1302,
-                "name": "Teams",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 14,
-        "name": "NBA 2K23",
-        "order": 14,
-        "sub_categories": [
-            {
-                "id": 1401,
-                "name": "Players",
-                "order": 1
-            },
-            {
-                "id": 1402,
-                "name": "Teams",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 15,
-        "name": "Among Us",
-        "order": 15,
-        "sub_categories": [
-            {
-                "id": 1501,
-                "name": "Skins",
-                "order": 1
-            },
-            {
-                "id": 1502,
-                "name": "Hats",
-                "order": 2
-            },
-            {
-                "id": 1503,
-                "name": "Pets",
-                "order": 3
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 16,
-        "name": "Roblox",
-        "order": 16,
-        "sub_categories": [
-            {
-                "id": 1601,
-                "name": "Avatars",
-                "order": 1
-            },
-            {
-                "id": 1602,
-                "name": "Games",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 17,
-        "name": "World of Warcraft",
-        "order": 17,
-        "sub_categories": [
-            {
-                "id": 1701,
-                "name": "Classes",
-                "order": 1
-            },
-            {
-                "id": 1702,
-                "name": "Mounts",
-                "order": 2
-            },
-            {
-                "id": 1703,
-                "name": "Gear",
-                "order": 3
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 18,
-        "name": "Destiny 2",
-        "order": 18,
-        "sub_categories": [
-            {
-                "id": 1801,
-                "name": "Classes",
-                "order": 1
-            },
-            {
-                "id": 1802,
-                "name": "Weapons",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 19,
-        "name": "Hearthstone",
-        "order": 19,
-        "sub_categories": [
-            {
-                "id": 1901,
-                "name": "Cards",
-                "order": 1
-            },
-            {
-                "id": 1902,
-                "name": "Decks",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 20,
-        "name": "The Sims 4",
-        "order": 20,
-        "sub_categories": [
-            {
-                "id": 2001,
-                "name": "Clothing",
-                "order": 1
-            },
-            {
-                "id": 2002,
-                "name": "Furniture",
-                "order": 2
-            },
-            {
-                "id": 2003,
-                "name": "Traits",
-                "order": 3
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 21,
-        "name": "Elden Ring",
-        "order": 21,
-        "sub_categories": [
-            {
-                "id": 2101,
-                "name": "Weapons",
-                "order": 1
-            },
-            {
-                "id": 2102,
-                "name": "Armor",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 22,
-        "name": "Cyberpunk 2077",
-        "order": 22,
-        "sub_categories": [
-            {
-                "id": 2201,
-                "name": "Weapons",
-                "order": 1
-            },
-            {
-                "id": 2202,
-                "name": "Cyberware",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 23,
-        "name": "Animal Crossing",
-        "order": 23,
-        "sub_categories": [
-            {
-                "id": 2301,
-                "name": "Furniture",
-                "order": 1
-            },
-            {
-                "id": 2302,
-                "name": "Clothing",
-                "order": 2
-            },
-            {
-                "id": 2303,
-                "name": "Villagers",
-                "order": 3
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 24,
-        "name": "Stardew Valley",
-        "order": 24,
-        "sub_categories": [
-            {
-                "id": 2401,
-                "name": "Crops",
-                "order": 1
-            },
-            {
-                "id": 2402,
-                "name": "Animals",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 25,
-        "name": "Grand Theft Auto V",
-        "order": 25,
-        "sub_categories": [
-            {
-                "id": 2501,
-                "name": "Vehicles",
-                "order": 1
-            },
-            {
-                "id": 2502,
-                "name": "Weapons",
-                "order": 2
-            },
-            {
-                "id": 2503,
-                "name": "Properties",
-                "order": 3
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 1,
-        "name": "Fortnite",
-        "order": 1,
-        "sub_categories": [
-            {
-                "id": 102,
-                "name": "Emotes",
-                "order": 2
-            },
-            {
-                "id": 103,
-                "name": "Pickaxes",
-                "order": 3
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 2,
-        "name": "Call of Duty: Warzone",
-        "order": 2,
-        "sub_categories": [
-            {
-                "id": 201,
-                "name": "Weapons",
-                "order": 1
-            },
-            {
-                "id": 202,
-                "name": "Operators",
-                "order": 2
-            },
-            {
-                "id": 203,
-                "name": "Loadouts",
-                "order": 3
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 3,
-        "name": "Apex Legends",
-        "order": 3,
-        "sub_categories": [
-            {
-                "id": 301,
-                "name": "Legends",
-                "order": 1
-            },
-            {
-                "id": 302,
-                "name": "Weapon Skins",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 4,
-        "name": "PUBG",
-        "order": 4,
-        "sub_categories": [
-            {
-                "id": 401,
-                "name": "Outfits",
-                "order": 1
-            },
-            {
-                "id": 403,
-                "name": "Vehicles",
-                "order": 2
-            },
-            {
-                "id": 402,
-                "name": "Guns",
-                "order": 3
-            }
-        ],
-        "hasOpenedSubCategories": true
-    },
-    {
-        "id": 5,
-        "name": "Minecraft",
-        "order": 5,
-        "sub_categories": [
-            {
-                "id": 501,
-                "name": "Blocks",
-                "order": 1
-            },
-            {
-                "id": 502,
-                "name": "Tools",
-                "order": 2
-            },
-            {
-                "id": 503,
-                "name": "Mobs",
-                "order": 3
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 6,
-        "name": "Valorant",
-        "order": 6,
-        "sub_categories": [
-            {
-                "id": 601,
-                "name": "Agents",
-                "order": 1
-            },
-            {
-                "id": 602,
-                "name": "Weapon Skins",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 7,
-        "name": "League of Legends",
-        "order": 7,
-        "sub_categories": [
-            {
-                "id": 701,
-                "name": "Champions",
-                "order": 1
-            },
-            {
-                "id": 702,
-                "name": "Skins",
-                "order": 2
-            },
-            {
-                "id": 703,
-                "name": "Runes",
-                "order": 3
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 8,
-        "name": "Overwatch 2",
-        "order": 8,
-        "sub_categories": [
-            {
-                "id": 801,
-                "name": "Heroes",
-                "order": 1
-            },
-            {
-                "id": 802,
-                "name": "Skins",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 9,
-        "name": "Genshin Impact",
-        "order": 9,
-        "sub_categories": [
-            {
-                "id": 901,
-                "name": "Characters",
-                "order": 1
-            },
-            {
-                "id": 902,
-                "name": "Weapons",
-                "order": 2
-            },
-            {
-                "id": 903,
-                "name": "Artifacts",
-                "order": 3
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 10,
-        "name": "Counter-Strike 2",
-        "order": 10,
-        "sub_categories": [
-            {
-                "id": 1001,
-                "name": "Skins",
-                "order": 1
-            },
-            {
-                "id": 1002,
-                "name": "Maps",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 11,
-        "name": "Dota 2",
-        "order": 11,
-        "sub_categories": [
-            {
-                "id": 1101,
-                "name": "Heroes",
-                "order": 1
-            },
-            {
-                "id": 1102,
-                "name": "Items",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 12,
-        "name": "Rocket League",
-        "order": 12,
-        "sub_categories": [
-            {
-                "id": 1201,
-                "name": "Cars",
-                "order": 1
-            },
-            {
-                "id": 1202,
-                "name": "Decals",
-                "order": 2
-            },
-            {
-                "id": 1203,
-                "name": "Wheels",
-                "order": 3
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 13,
-        "name": "FIFA 23",
-        "order": 13,
-        "sub_categories": [
-            {
-                "id": 1301,
-                "name": "Players",
-                "order": 1
-            },
-            {
-                "id": 1302,
-                "name": "Teams",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 14,
-        "name": "NBA 2K23",
-        "order": 14,
-        "sub_categories": [
-            {
-                "id": 1401,
-                "name": "Players",
-                "order": 1
-            },
-            {
-                "id": 1402,
-                "name": "Teams",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 15,
-        "name": "Among Us",
-        "order": 15,
-        "sub_categories": [
-            {
-                "id": 1501,
-                "name": "Skins",
-                "order": 1
-            },
-            {
-                "id": 1502,
-                "name": "Hats",
-                "order": 2
-            },
-            {
-                "id": 1503,
-                "name": "Pets",
-                "order": 3
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 16,
-        "name": "Roblox",
-        "order": 16,
-        "sub_categories": [
-            {
-                "id": 1601,
-                "name": "Avatars",
-                "order": 1
-            },
-            {
-                "id": 1602,
-                "name": "Games",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 17,
-        "name": "World of Warcraft",
-        "order": 17,
-        "sub_categories": [
-            {
-                "id": 1701,
-                "name": "Classes",
-                "order": 1
-            },
-            {
-                "id": 1702,
-                "name": "Mounts",
-                "order": 2
-            },
-            {
-                "id": 1703,
-                "name": "Gear",
-                "order": 3
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 18,
-        "name": "Destiny 2",
-        "order": 18,
-        "sub_categories": [
-            {
-                "id": 1801,
-                "name": "Classes",
-                "order": 1
-            },
-            {
-                "id": 1802,
-                "name": "Weapons",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 19,
-        "name": "Hearthstone",
-        "order": 19,
-        "sub_categories": [
-            {
-                "id": 1901,
-                "name": "Cards",
-                "order": 1
-            },
-            {
-                "id": 1902,
-                "name": "Decks",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 20,
-        "name": "The Sims 4",
-        "order": 20,
-        "sub_categories": [
-            {
-                "id": 2001,
-                "name": "Clothing",
-                "order": 1
-            },
-            {
-                "id": 2002,
-                "name": "Furniture",
-                "order": 2
-            },
-            {
-                "id": 2003,
-                "name": "Traits",
-                "order": 3
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 21,
-        "name": "Elden Ring",
-        "order": 21,
-        "sub_categories": [
-            {
-                "id": 2101,
-                "name": "Weapons",
-                "order": 1
-            },
-            {
-                "id": 2102,
-                "name": "Armor",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 22,
-        "name": "Cyberpunk 2077",
-        "order": 22,
-        "sub_categories": [
-            {
-                "id": 2201,
-                "name": "Weapons",
-                "order": 1
-            },
-            {
-                "id": 2202,
-                "name": "Cyberware",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 23,
-        "name": "Animal Crossing",
-        "order": 23,
-        "sub_categories": [
-            {
-                "id": 2301,
-                "name": "Furniture",
-                "order": 1
-            },
-            {
-                "id": 2302,
-                "name": "Clothing",
-                "order": 2
-            },
-            {
-                "id": 2303,
-                "name": "Villagers",
-                "order": 3
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 24,
-        "name": "Stardew Valley",
-        "order": 24,
-        "sub_categories": [
-            {
-                "id": 2401,
-                "name": "Crops",
-                "order": 1
-            },
-            {
-                "id": 2402,
-                "name": "Animals",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 25,
-        "name": "Grand Theft Auto V",
-        "order": 25,
-        "sub_categories": [
-            {
-                "id": 2501,
-                "name": "Vehicles",
-                "order": 1
-            },
-            {
-                "id": 2502,
-                "name": "Weapons",
-                "order": 2
-            },
-            {
-                "id": 2503,
-                "name": "Properties",
-                "order": 3
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 1,
-        "name": "Fortnite",
-        "order": 1,
-        "sub_categories": [
-            {
-                "id": 102,
-                "name": "Emotes",
-                "order": 2
-            },
-            {
-                "id": 103,
-                "name": "Pickaxes",
-                "order": 3
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 2,
-        "name": "Call of Duty: Warzone",
-        "order": 2,
-        "sub_categories": [
-            {
-                "id": 201,
-                "name": "Weapons",
-                "order": 1
-            },
-            {
-                "id": 202,
-                "name": "Operators",
-                "order": 2
-            },
-            {
-                "id": 203,
-                "name": "Loadouts",
-                "order": 3
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 3,
-        "name": "Apex Legends",
-        "order": 3,
-        "sub_categories": [
-            {
-                "id": 301,
-                "name": "Legends",
-                "order": 1
-            },
-            {
-                "id": 302,
-                "name": "Weapon Skins",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 4,
-        "name": "PUBG",
-        "order": 4,
-        "sub_categories": [
-            {
-                "id": 401,
-                "name": "Outfits",
-                "order": 1
-            },
-            {
-                "id": 403,
-                "name": "Vehicles",
-                "order": 2
-            },
-            {
-                "id": 402,
-                "name": "Guns",
-                "order": 3
-            }
-        ],
-        "hasOpenedSubCategories": true
-    },
-    {
-        "id": 5,
-        "name": "Minecraft",
-        "order": 5,
-        "sub_categories": [
-            {
-                "id": 501,
-                "name": "Blocks",
-                "order": 1
-            },
-            {
-                "id": 502,
-                "name": "Tools",
-                "order": 2
-            },
-            {
-                "id": 503,
-                "name": "Mobs",
-                "order": 3
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 6,
-        "name": "Valorant",
-        "order": 6,
-        "sub_categories": [
-            {
-                "id": 601,
-                "name": "Agents",
-                "order": 1
-            },
-            {
-                "id": 602,
-                "name": "Weapon Skins",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 7,
-        "name": "League of Legends",
-        "order": 7,
-        "sub_categories": [
-            {
-                "id": 701,
-                "name": "Champions",
-                "order": 1
-            },
-            {
-                "id": 702,
-                "name": "Skins",
-                "order": 2
-            },
-            {
-                "id": 703,
-                "name": "Runes",
-                "order": 3
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 8,
-        "name": "Overwatch 2",
-        "order": 8,
-        "sub_categories": [
-            {
-                "id": 801,
-                "name": "Heroes",
-                "order": 1
-            },
-            {
-                "id": 802,
-                "name": "Skins",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 9,
-        "name": "Genshin Impact",
-        "order": 9,
-        "sub_categories": [
-            {
-                "id": 901,
-                "name": "Characters",
-                "order": 1
-            },
-            {
-                "id": 902,
-                "name": "Weapons",
-                "order": 2
-            },
-            {
-                "id": 903,
-                "name": "Artifacts",
-                "order": 3
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 10,
-        "name": "Counter-Strike 2",
-        "order": 10,
-        "sub_categories": [
-            {
-                "id": 1001,
-                "name": "Skins",
-                "order": 1
-            },
-            {
-                "id": 1002,
-                "name": "Maps",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 11,
-        "name": "Dota 2",
-        "order": 11,
-        "sub_categories": [
-            {
-                "id": 1101,
-                "name": "Heroes",
-                "order": 1
-            },
-            {
-                "id": 1102,
-                "name": "Items",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 12,
-        "name": "Rocket League",
-        "order": 12,
-        "sub_categories": [
-            {
-                "id": 1201,
-                "name": "Cars",
-                "order": 1
-            },
-            {
-                "id": 1202,
-                "name": "Decals",
-                "order": 2
-            },
-            {
-                "id": 1203,
-                "name": "Wheels",
-                "order": 3
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 13,
-        "name": "FIFA 23",
-        "order": 13,
-        "sub_categories": [
-            {
-                "id": 1301,
-                "name": "Players",
-                "order": 1
-            },
-            {
-                "id": 1302,
-                "name": "Teams",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 14,
-        "name": "NBA 2K23",
-        "order": 14,
-        "sub_categories": [
-            {
-                "id": 1401,
-                "name": "Players",
-                "order": 1
-            },
-            {
-                "id": 1402,
-                "name": "Teams",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 15,
-        "name": "Among Us",
-        "order": 15,
-        "sub_categories": [
-            {
-                "id": 1501,
-                "name": "Skins",
-                "order": 1
-            },
-            {
-                "id": 1502,
-                "name": "Hats",
-                "order": 2
-            },
-            {
-                "id": 1503,
-                "name": "Pets",
-                "order": 3
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 16,
-        "name": "Roblox",
-        "order": 16,
-        "sub_categories": [
-            {
-                "id": 1601,
-                "name": "Avatars",
-                "order": 1
-            },
-            {
-                "id": 1602,
-                "name": "Games",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 17,
-        "name": "World of Warcraft",
-        "order": 17,
-        "sub_categories": [
-            {
-                "id": 1701,
-                "name": "Classes",
-                "order": 1
-            },
-            {
-                "id": 1702,
-                "name": "Mounts",
-                "order": 2
-            },
-            {
-                "id": 1703,
-                "name": "Gear",
-                "order": 3
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 18,
-        "name": "Destiny 2",
-        "order": 18,
-        "sub_categories": [
-            {
-                "id": 1801,
-                "name": "Classes",
-                "order": 1
-            },
-            {
-                "id": 1802,
-                "name": "Weapons",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 19,
-        "name": "Hearthstone",
-        "order": 19,
-        "sub_categories": [
-            {
-                "id": 1901,
-                "name": "Cards",
-                "order": 1
-            },
-            {
-                "id": 1902,
-                "name": "Decks",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 20,
-        "name": "The Sims 4",
-        "order": 20,
-        "sub_categories": [
-            {
-                "id": 2001,
-                "name": "Clothing",
-                "order": 1
-            },
-            {
-                "id": 2002,
-                "name": "Furniture",
-                "order": 2
-            },
-            {
-                "id": 2003,
-                "name": "Traits",
-                "order": 3
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 21,
-        "name": "Elden Ring",
-        "order": 21,
-        "sub_categories": [
-            {
-                "id": 2101,
-                "name": "Weapons",
-                "order": 1
-            },
-            {
-                "id": 2102,
-                "name": "Armor",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 22,
-        "name": "Cyberpunk 2077",
-        "order": 22,
-        "sub_categories": [
-            {
-                "id": 2201,
-                "name": "Weapons",
-                "order": 1
-            },
-            {
-                "id": 2202,
-                "name": "Cyberware",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 23,
-        "name": "Animal Crossing",
-        "order": 23,
-        "sub_categories": [
-            {
-                "id": 2301,
-                "name": "Furniture",
-                "order": 1
-            },
-            {
-                "id": 2302,
-                "name": "Clothing",
-                "order": 2
-            },
-            {
-                "id": 2303,
-                "name": "Villagers",
-                "order": 3
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 24,
-        "name": "Stardew Valley",
-        "order": 24,
-        "sub_categories": [
-            {
-                "id": 2401,
-                "name": "Crops",
-                "order": 1
-            },
-            {
-                "id": 2402,
-                "name": "Animals",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 25,
-        "name": "Grand Theft Auto V",
-        "order": 25,
-        "sub_categories": [
-            {
-                "id": 2501,
-                "name": "Vehicles",
-                "order": 1
-            },
-            {
-                "id": 2502,
-                "name": "Weapons",
-                "order": 2
-            },
-            {
-                "id": 2503,
-                "name": "Properties",
-                "order": 3
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 1,
-        "name": "Fortnite",
-        "order": 1,
-        "sub_categories": [
-            {
-                "id": 102,
-                "name": "Emotes",
-                "order": 2
-            },
-            {
-                "id": 103,
-                "name": "Pickaxes",
-                "order": 3
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 2,
-        "name": "Call of Duty: Warzone",
-        "order": 2,
-        "sub_categories": [
-            {
-                "id": 201,
-                "name": "Weapons",
-                "order": 1
-            },
-            {
-                "id": 202,
-                "name": "Operators",
-                "order": 2
-            },
-            {
-                "id": 203,
-                "name": "Loadouts",
-                "order": 3
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 3,
-        "name": "Apex Legends",
-        "order": 3,
-        "sub_categories": [
-            {
-                "id": 301,
-                "name": "Legends",
-                "order": 1
-            },
-            {
-                "id": 302,
-                "name": "Weapon Skins",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 4,
-        "name": "PUBG",
-        "order": 4,
-        "sub_categories": [
-            {
-                "id": 401,
-                "name": "Outfits",
-                "order": 1
-            },
-            {
-                "id": 403,
-                "name": "Vehicles",
-                "order": 2
-            },
-            {
-                "id": 402,
-                "name": "Guns",
-                "order": 3
-            }
-        ],
-        "hasOpenedSubCategories": true
-    },
-    {
-        "id": 5,
-        "name": "Minecraft",
-        "order": 5,
-        "sub_categories": [
-            {
-                "id": 501,
-                "name": "Blocks",
-                "order": 1
-            },
-            {
-                "id": 502,
-                "name": "Tools",
-                "order": 2
-            },
-            {
-                "id": 503,
-                "name": "Mobs",
-                "order": 3
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 6,
-        "name": "Valorant",
-        "order": 6,
-        "sub_categories": [
-            {
-                "id": 601,
-                "name": "Agents",
-                "order": 1
-            },
-            {
-                "id": 602,
-                "name": "Weapon Skins",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 7,
-        "name": "League of Legends",
-        "order": 7,
-        "sub_categories": [
-            {
-                "id": 701,
-                "name": "Champions",
-                "order": 1
-            },
-            {
-                "id": 702,
-                "name": "Skins",
-                "order": 2
-            },
-            {
-                "id": 703,
-                "name": "Runes",
-                "order": 3
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 8,
-        "name": "Overwatch 2",
-        "order": 8,
-        "sub_categories": [
-            {
-                "id": 801,
-                "name": "Heroes",
-                "order": 1
-            },
-            {
-                "id": 802,
-                "name": "Skins",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 9,
-        "name": "Genshin Impact",
-        "order": 9,
-        "sub_categories": [
-            {
-                "id": 901,
-                "name": "Characters",
-                "order": 1
-            },
-            {
-                "id": 902,
-                "name": "Weapons",
-                "order": 2
-            },
-            {
-                "id": 903,
-                "name": "Artifacts",
-                "order": 3
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 10,
-        "name": "Counter-Strike 2",
-        "order": 10,
-        "sub_categories": [
-            {
-                "id": 1001,
-                "name": "Skins",
-                "order": 1
-            },
-            {
-                "id": 1002,
-                "name": "Maps",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 11,
-        "name": "Dota 2",
-        "order": 11,
-        "sub_categories": [
-            {
-                "id": 1101,
-                "name": "Heroes",
-                "order": 1
-            },
-            {
-                "id": 1102,
-                "name": "Items",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 12,
-        "name": "Rocket League",
-        "order": 12,
-        "sub_categories": [
-            {
-                "id": 1201,
-                "name": "Cars",
-                "order": 1
-            },
-            {
-                "id": 1202,
-                "name": "Decals",
-                "order": 2
-            },
-            {
-                "id": 1203,
-                "name": "Wheels",
-                "order": 3
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 13,
-        "name": "FIFA 23",
-        "order": 13,
-        "sub_categories": [
-            {
-                "id": 1301,
-                "name": "Players",
-                "order": 1
-            },
-            {
-                "id": 1302,
-                "name": "Teams",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 14,
-        "name": "NBA 2K23",
-        "order": 14,
-        "sub_categories": [
-            {
-                "id": 1401,
-                "name": "Players",
-                "order": 1
-            },
-            {
-                "id": 1402,
-                "name": "Teams",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 15,
-        "name": "Among Us",
-        "order": 15,
-        "sub_categories": [
-            {
-                "id": 1501,
-                "name": "Skins",
-                "order": 1
-            },
-            {
-                "id": 1502,
-                "name": "Hats",
-                "order": 2
-            },
-            {
-                "id": 1503,
-                "name": "Pets",
-                "order": 3
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 16,
-        "name": "Roblox",
-        "order": 16,
-        "sub_categories": [
-            {
-                "id": 1601,
-                "name": "Avatars",
-                "order": 1
-            },
-            {
-                "id": 1602,
-                "name": "Games",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 17,
-        "name": "World of Warcraft",
-        "order": 17,
-        "sub_categories": [
-            {
-                "id": 1701,
-                "name": "Classes",
-                "order": 1
-            },
-            {
-                "id": 1702,
-                "name": "Mounts",
-                "order": 2
-            },
-            {
-                "id": 1703,
-                "name": "Gear",
-                "order": 3
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 18,
-        "name": "Destiny 2",
-        "order": 18,
-        "sub_categories": [
-            {
-                "id": 1801,
-                "name": "Classes",
-                "order": 1
-            },
-            {
-                "id": 1802,
-                "name": "Weapons",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 19,
-        "name": "Hearthstone",
-        "order": 19,
-        "sub_categories": [
-            {
-                "id": 1901,
-                "name": "Cards",
-                "order": 1
-            },
-            {
-                "id": 1902,
-                "name": "Decks",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 20,
-        "name": "The Sims 4",
-        "order": 20,
-        "sub_categories": [
-            {
-                "id": 2001,
-                "name": "Clothing",
-                "order": 1
-            },
-            {
-                "id": 2002,
-                "name": "Furniture",
-                "order": 2
-            },
-            {
-                "id": 2003,
-                "name": "Traits",
-                "order": 3
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 21,
-        "name": "Elden Ring",
-        "order": 21,
-        "sub_categories": [
-            {
-                "id": 2101,
-                "name": "Weapons",
-                "order": 1
-            },
-            {
-                "id": 2102,
-                "name": "Armor",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 22,
-        "name": "Cyberpunk 2077",
-        "order": 22,
-        "sub_categories": [
-            {
-                "id": 2201,
-                "name": "Weapons",
-                "order": 1
-            },
-            {
-                "id": 2202,
-                "name": "Cyberware",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 23,
-        "name": "Animal Crossing",
-        "order": 23,
-        "sub_categories": [
-            {
-                "id": 2301,
-                "name": "Furniture",
-                "order": 1
-            },
-            {
-                "id": 2302,
-                "name": "Clothing",
-                "order": 2
-            },
-            {
-                "id": 2303,
-                "name": "Villagers",
-                "order": 3
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 24,
-        "name": "Stardew Valley",
-        "order": 24,
-        "sub_categories": [
-            {
-                "id": 2401,
-                "name": "Crops",
-                "order": 1
-            },
-            {
-                "id": 2402,
-                "name": "Animals",
-                "order": 2
-            }
-        ],
-        "hasOpenedSubCategories": false
-    },
-    {
-        "id": 25,
-        "name": "Grand Theft Auto V",
-        "order": 25,
-        "sub_categories": [
-            {
-                "id": 2501,
-                "name": "Vehicles",
-                "order": 1
-            },
-            {
-                "id": 2502,
-                "name": "Weapons",
-                "order": 2
-            },
-            {
-                "id": 2503,
-                "name": "Properties",
-                "order": 3
-            }
-        ],
-        "hasOpenedSubCategories": false
-    }
+  {
+    "id": 7,
+    "name": "League of Legends",
+    "order": 1,
+    "sub_categories": [
+      {
+        "id": 701,
+        "name": "Champions",
+        "order": 1
+      },
+      {
+        "id": 703,
+        "name": "Runes",
+        "order": 2
+      },
+      {
+        "id": 702,
+        "name": "Skins",
+        "order": 3
+      }
+    ],
+    "hasOpenedSubCategories": false
+  },
+  {
+    "id": 9,
+    "name": "Genshin Impact",
+    "order": 2,
+    "sub_categories": [
+      {
+        "id": 901,
+        "name": "Characters",
+        "order": 1
+      },
+      {
+        "id": 902,
+        "name": "Weapons",
+        "order": 2
+      },
+      {
+        "id": 903,
+        "name": "Artifacts",
+        "order": 3
+      }
+    ],
+    "hasOpenedSubCategories": false
+  },
+  {
+    "id": 8,
+    "name": "Overwatch 2",
+    "order": 3,
+    "sub_categories": [
+      {
+        "id": 801,
+        "name": "Heroes",
+        "order": 1
+      },
+      {
+        "id": 802,
+        "name": "Skins",
+        "order": 2
+      }
+    ],
+    "hasOpenedSubCategories": false
+  },
+  {
+    "id": 6,
+    "name": "Valorant",
+    "order": 4,
+    "sub_categories": [
+      {
+        "id": 602,
+        "name": "Weapon Skins",
+        "order": 1
+      },
+      {
+        "id": 601,
+        "name": "Agents",
+        "order": 2
+      }
+    ],
+    "hasOpenedSubCategories": false
+  },
+  {
+    "id": 10,
+    "name": "Counter-Strike 2",
+    "order": 5,
+    "sub_categories": [
+      {
+        "id": 1001,
+        "name": "Skins",
+        "order": 1
+      },
+      {
+        "id": 1002,
+        "name": "Maps",
+        "order": 2
+      }
+    ],
+    "hasOpenedSubCategories": false
+  },
+  {
+    "id": 11,
+    "name": "Dota 2",
+    "order": 6,
+    "sub_categories": [
+      {
+        "id": 1101,
+        "name": "Heroes",
+        "order": 1
+      },
+      {
+        "id": 1102,
+        "name": "Items",
+        "order": 2
+      }
+    ],
+    "hasOpenedSubCategories": false
+  },
+  {
+    "id": 12,
+    "name": "Rocket League",
+    "order": 7,
+    "sub_categories": [
+      {
+        "id": 1201,
+        "name": "Cars",
+        "order": 1
+      },
+      {
+        "id": 1202,
+        "name": "Decals",
+        "order": 2
+      },
+      {
+        "id": 1203,
+        "name": "Wheels",
+        "order": 3
+      }
+    ],
+    "hasOpenedSubCategories": false
+  },
+  {
+    "id": 13,
+    "name": "FIFA 23",
+    "order": 8,
+    "sub_categories": [
+      {
+        "id": 1301,
+        "name": "Players",
+        "order": 1
+      },
+      {
+        "id": 1302,
+        "name": "Teams",
+        "order": 2
+      }
+    ],
+    "hasOpenedSubCategories": false
+  },
+  {
+    "id": 14,
+    "name": "NBA 2K23",
+    "order": 9,
+    "sub_categories": [
+      {
+        "id": 1401,
+        "name": "Players",
+        "order": 1
+      },
+      {
+        "id": 1402,
+        "name": "Teams",
+        "order": 2
+      }
+    ],
+    "hasOpenedSubCategories": false
+  },
+  {
+    "id": 15,
+    "name": "Among Us",
+    "order": 10,
+    "sub_categories": [
+      {
+        "id": 1501,
+        "name": "Skins",
+        "order": 1
+      },
+      {
+        "id": 1502,
+        "name": "Hats",
+        "order": 2
+      },
+      {
+        "id": 1503,
+        "name": "Pets",
+        "order": 3
+      }
+    ],
+    "hasOpenedSubCategories": false
+  },
+  {
+    "id": 16,
+    "name": "Genshin Impact",
+    "order": 11,
+    "sub_categories": [
+      {
+        "id": 901,
+        "name": "Characters",
+        "order": 1
+      },
+      {
+        "id": 902,
+        "name": "Weapons",
+        "order": 2
+      },
+      {
+        "id": 903,
+        "name": "Artifacts",
+        "order": 3
+      }
+    ],
+    "hasOpenedSubCategories": false
+  },
+  {
+    "id": 17,
+    "name": "Valorant",
+    "order": 12,
+    "sub_categories": [
+      {
+        "id": 601,
+        "name": "Agents",
+        "order": 1
+      },
+      {
+        "id": 602,
+        "name": "Weapon Skins",
+        "order": 2
+      }
+    ],
+    "hasOpenedSubCategories": false
+  },
+  {
+    "id": 18,
+    "name": "Overwatch 2",
+    "order": 13,
+    "sub_categories": [
+      {
+        "id": 801,
+        "name": "Heroes",
+        "order": 1
+      },
+      {
+        "id": 802,
+        "name": "Skins",
+        "order": 2
+      }
+    ],
+    "hasOpenedSubCategories": false
+  },
+  {
+    "id": 19,
+    "name": "League of Legends",
+    "order": 14,
+    "sub_categories": [
+      {
+        "id": 701,
+        "name": "Champions",
+        "order": 1
+      },
+      {
+        "id": 702,
+        "name": "Skins",
+        "order": 2
+      },
+      {
+        "id": 703,
+        "name": "Runes",
+        "order": 3
+      }
+    ],
+    "hasOpenedSubCategories": false
+  },
+  {
+    "id": 20,
+    "name": "Valorant",
+    "order": 15,
+    "sub_categories": [
+      {
+        "id": 601,
+        "name": "Agents",
+        "order": 1
+      },
+      {
+        "id": 602,
+        "name": "Weapon Skins",
+        "order": 2
+      }
+    ],
+    "hasOpenedSubCategories": false
+  },
+  {
+    "id": 21,
+    "name": "Genshin Impact",
+    "order": 16,
+    "sub_categories": [
+      {
+        "id": 901,
+        "name": "Characters",
+        "order": 1
+      },
+      {
+        "id": 902,
+        "name": "Weapons",
+        "order": 2
+      },
+      {
+        "id": 903,
+        "name": "Artifacts",
+        "order": 3
+      }
+    ],
+    "hasOpenedSubCategories": false
+  },
+  {
+    "id": 22,
+    "name": "Overwatch 2",
+    "order": 17,
+    "sub_categories": [
+      {
+        "id": 801,
+        "name": "Heroes",
+        "order": 1
+      },
+      {
+        "id": 802,
+        "name": "Skins",
+        "order": 2
+      }
+    ],
+    "hasOpenedSubCategories": false
+  },
+  {
+    "id": 23,
+    "name": "League of Legends",
+    "order": 18,
+    "sub_categories": [
+      {
+        "id": 701,
+        "name": "Champions",
+        "order": 1
+      },
+      {
+        "id": 702,
+        "name": "Skins",
+        "order": 2
+      },
+      {
+        "id": 703,
+        "name": "Runes",
+        "order": 3
+      }
+    ],
+    "hasOpenedSubCategories": false
+  },
+  {
+    "id": 24,
+    "name": "Genshin Impact",
+    "order": 19,
+    "sub_categories": [
+      {
+        "id": 901,
+        "name": "Characters",
+        "order": 1
+      },
+      {
+        "id": 902,
+        "name": "Weapons",
+        "order": 2
+      },
+      {
+        "id": 903,
+        "name": "Artifacts",
+        "order": 3
+      }
+    ],
+    "hasOpenedSubCategories": false
+  },
+  {
+    "id": 25,
+    "name": "Valorant",
+    "order": 20,
+    "sub_categories": [
+      {
+        "id": 601,
+        "name": "Agents",
+        "order": 1
+      },
+      {
+        "id": 602,
+        "name": "Weapon Skins",
+        "order": 2
+      }
+    ],
+    "hasOpenedSubCategories": false
+  },
+  {
+    "id": 26,
+    "name": "Overwatch 2",
+    "order": 21,
+    "sub_categories": [
+      {
+        "id": 801,
+        "name": "Heroes",
+        "order": 1
+      },
+      {
+        "id": 802,
+        "name": "Skins",
+        "order": 2
+      }
+    ],
+    "hasOpenedSubCategories": false
+  },
+  {
+    "id": 27,
+    "name": "League of Legends",
+    "order": 22,
+    "sub_categories": [
+      {
+        "id": 701,
+        "name": "Champions",
+        "order": 1
+      },
+      {
+        "id": 702,
+        "name": "Skins",
+        "order": 2
+      },
+      {
+        "id": 703,
+        "name": "Runes",
+        "order": 3
+      }
+    ],
+    "hasOpenedSubCategories": false
+  },
+  {
+    "id": 28,
+    "name": "Genshin Impact",
+    "order": 23,
+    "sub_categories": [
+      {
+        "id": 901,
+        "name": "Characters",
+        "order": 1
+      },
+      {
+        "id": 902,
+        "name": "Weapons",
+        "order": 2
+      },
+      {
+        "id": 903,
+        "name": "Artifacts",
+        "order": 3
+      }
+    ],
+    "hasOpenedSubCategories": false
+  },
+  {
+    "id": 29,
+    "name": "Valorant",
+    "order": 24,
+    "sub_categories": [
+      {
+        "id": 601,
+        "name": "Agents",
+        "order": 1
+      },
+      {
+        "id": 602,
+        "name": "Weapon Skins",
+        "order": 2
+      }
+    ],
+    "hasOpenedSubCategories": false
+  },
+  {
+    "id": 30,
+    "name": "Overwatch 2",
+    "order": 25,
+    "sub_categories": [
+      {
+        "id": 801,
+        "name": "Heroes",
+        "order": 1
+      },
+      {
+        "id": 802,
+        "name": "Skins",
+        "order": 2
+      }
+    ],
+    "hasOpenedSubCategories": false
+  },
+  {
+    "id": 31,
+    "name": "League of Legends",
+    "order": 26,
+    "sub_categories": [
+      {
+        "id": 701,
+        "name": "Champions",
+        "order": 1
+      },
+      {
+        "id": 702,
+        "name": "Skins",
+        "order": 2
+      },
+      {
+        "id": 703,
+        "name": "Runes",
+        "order": 3
+      }
+    ],
+    "hasOpenedSubCategories": false
+  },
+  {
+    "id": 32,
+    "name": "Overwatch 2",
+    "order": 27,
+    "sub_categories": [
+      {
+        "id": 801,
+        "name": "Heroes",
+        "order": 1
+      },
+      {
+        "id": 802,
+        "name": "Skins",
+        "order": 2
+      }
+    ],
+    "hasOpenedSubCategories": false
+  },
+  {
+    "id": 33,
+    "name": "League of Legends",
+    "order": 28,
+    "sub_categories": [
+      {
+        "id": 701,
+        "name": "Champions",
+        "order": 1
+      },
+      {
+        "id": 702,
+        "name": "Skins",
+        "order": 2
+      },
+      {
+        "id": 703,
+        "name": "Runes",
+        "order": 3
+      }
+    ],
+    "hasOpenedSubCategories": false
+  },
+  {
+    "id": 34,
+    "name": "Genshin Impact",
+    "order": 29,
+    "sub_categories": [
+      {
+        "id": 901,
+        "name": "Characters",
+        "order": 1
+      },
+      {
+        "id": 902,
+        "name": "Weapons",
+        "order": 2
+      },
+      {
+        "id": 903,
+        "name": "Artifacts",
+        "order": 3
+      }
+    ],
+    "hasOpenedSubCategories": false
+  },
+  {
+    "id": 35,
+    "name": "Valorant",
+    "order": 30,
+    "sub_categories": [
+      {
+        "id": 601,
+        "name": "Agents",
+        "order": 1
+      },
+      {
+        "id": 602,
+        "name": "Weapon Skins",
+        "order": 2
+      }
+    ],
+    "hasOpenedSubCategories": false
+  },
+  {
+    "id": 36,
+    "name": "Overwatch 2",
+    "order": 31,
+    "sub_categories": [
+      {
+        "id": 801,
+        "name": "Heroes",
+        "order": 1
+      },
+      {
+        "id": 802,
+        "name": "Skins",
+        "order": 2
+      }
+    ],
+    "hasOpenedSubCategories": false
+  },
+  {
+    "id": 37,
+    "name": "League of Legends",
+    "order": 32,
+    "sub_categories": [
+      {
+        "id": 701,
+        "name": "Champions",
+        "order": 1
+      },
+      {
+        "id": 702,
+        "name": "Skins",
+        "order": 2
+      },
+      {
+        "id": 703,
+        "name": "Runes",
+        "order": 3
+      }
+    ],
+    "hasOpenedSubCategories": false
+  },
+  {
+    "id": 38,
+    "name": "Genshin Impact",
+    "order": 33,
+    "sub_categories": [
+      {
+        "id": 901,
+        "name": "Characters",
+        "order": 1
+      },
+      {
+        "id": 902,
+        "name": "Weapons",
+        "order": 2
+      },
+      {
+        "id": 903,
+        "name": "Artifacts",
+        "order": 3
+      }
+    ],
+    "hasOpenedSubCategories": false
+  },
+  {
+    "id": 39,
+    "name": "Valorant",
+    "order": 34,
+    "sub_categories": [
+      {
+        "id": 601,
+        "name": "Agents",
+        "order": 1
+      },
+      {
+        "id": 602,
+        "name": "Weapon Skins",
+        "order": 2
+      }
+    ],
+    "hasOpenedSubCategories": false
+  },
+  {
+    "id": 40,
+    "name": "Valorant",
+    "order": 35,
+    "sub_categories": [
+      {
+        "id": 601,
+        "name": "Agents",
+        "order": 1
+      },
+      {
+        "id": 602,
+        "name": "Weapon Skins",
+        "order": 2
+      }
+    ],
+    "hasOpenedSubCategories": false
+  },
+  {
+    "id": 41,
+    "name": "League of Legends",
+    "order": 36,
+    "sub_categories": [
+      {
+        "id": 701,
+        "name": "Champions",
+        "order": 1
+      },
+      {
+        "id": 702,
+        "name": "Skins",
+        "order": 2
+      },
+      {
+        "id": 703,
+        "name": "Runes",
+        "order": 3
+      }
+    ],
+    "hasOpenedSubCategories": false
+  },
+  {
+    "id": 42,
+    "name": "Overwatch 2",
+    "order": 37,
+    "sub_categories": [
+      {
+        "id": 801,
+        "name": "Heroes",
+        "order": 1
+      },
+      {
+        "id": 802,
+        "name": "Skins",
+        "order": 2
+      }
+    ],
+    "hasOpenedSubCategories": false
+  },
+  {
+    "id": 43,
+    "name": "Genshin Impact",
+    "order": 38,
+    "sub_categories": [
+      {
+        "id": 901,
+        "name": "Characters",
+        "order": 1
+      },
+      {
+        "id": 902,
+        "name": "Weapons",
+        "order": 2
+      },
+      {
+        "id": 903,
+        "name": "Artifacts",
+        "order": 3
+      }
+    ],
+    "hasOpenedSubCategories": false
+  }
 ]

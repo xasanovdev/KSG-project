@@ -5,7 +5,7 @@ export default function formatList(list: { name: string }[]) {
 export function generatePaginationData(
     currentPagination: number,
     totalCardNumber: number,
-    currentPageCardsNumber: number = 10
+    currentPageCardsNumber: number = 4
 ) {
     const lastPagination = Math.ceil(totalCardNumber / currentPageCardsNumber);
     const firstPagination = 1;
