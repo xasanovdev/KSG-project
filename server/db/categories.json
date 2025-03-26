@@ -1,5 +1,54 @@
 [
   {
+    "id": 1742967323942,
+    "name": "test1",
+    "order": 1,
+    "sub_categories": [],
+    "hasOpenedSubCategories": false
+  },
+  {
+    "id": 1742967144722,
+    "name": "test",
+    "order": 1,
+    "sub_categories": [],
+    "hasOpenedSubCategories": false
+  },
+  {
+    "id": 1742967144722,
+    "name": "test",
+    "order": 1,
+    "sub_categories": [],
+    "hasOpenedSubCategories": false
+  },
+  {
+    "id": 1742967144722,
+    "name": "test",
+    "order": 1,
+    "sub_categories": [],
+    "hasOpenedSubCategories": false
+  },
+  {
+    "id": 1742967120384,
+    "name": "test",
+    "order": 1,
+    "sub_categories": [],
+    "hasOpenedSubCategories": false
+  },
+  {
+    "id": 1742967018352,
+    "name": "test",
+    "order": 1,
+    "sub_categories": [],
+    "hasOpenedSubCategories": false
+  },
+  {
+    "id": 1742966939454,
+    "name": "test",
+    "order": 1,
+    "sub_categories": [],
+    "hasOpenedSubCategories": false
+  },
+  {
     "id": 7,
     "name": "League of Legends",
     "order": 1,
@@ -159,27 +208,9 @@
     "hasOpenedSubCategories": false
   },
   {
-    "id": 14,
-    "name": "NBA 2K23",
-    "order": 9,
-    "sub_categories": [
-      {
-        "id": 1401,
-        "name": "Players",
-        "order": 1
-      },
-      {
-        "id": 1402,
-        "name": "Teams",
-        "order": 2
-      }
-    ],
-    "hasOpenedSubCategories": false
-  },
-  {
     "id": 15,
     "name": "Among Us",
-    "order": 10,
+    "order": 9,
     "sub_categories": [
       {
         "id": 1501,
@@ -202,7 +233,7 @@
   {
     "id": 16,
     "name": "Genshin Impact",
-    "order": 11,
+    "order": 10,
     "sub_categories": [
       {
         "id": 901,
@@ -218,6 +249,24 @@
         "id": 903,
         "name": "Artifacts",
         "order": 3
+      }
+    ],
+    "hasOpenedSubCategories": false
+  },
+  {
+    "id": 14,
+    "name": "NBA 2K23",
+    "order": 11,
+    "sub_categories": [
+      {
+        "id": 1402,
+        "name": "Teams",
+        "order": 1
+      },
+      {
+        "id": 1401,
+        "name": "Players",
+        "order": 2
       }
     ],
     "hasOpenedSubCategories": false

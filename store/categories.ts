@@ -103,13 +103,13 @@ export const useCategoriesStore = defineStore('categories', {
             this.error = null;
 
             try {
-                await $fetch('/api/categories', {
+                await $fetch('/api/add-category', {
                     method: 'POST',
-                    body: { categories: [...this.categories, newCategory] },
+                    body: { category: newCategory },
                 });
 
                 // Refetch categories instead of manually updating
-                await this.fetchCategories();
+                await this.fetchCategories(1);
             } catch (error) {
                 this.error =
                     error instanceof Error

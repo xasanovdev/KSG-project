@@ -174,8 +174,8 @@ const onDrop = async (
                 draggedItem: draggedItem.value,
                 targetCategoryId,
                 type,
-                targetSubId
-            }
+                targetSubId,
+            },
         });
 
         if (response.success) {
@@ -190,7 +190,6 @@ const onDrop = async (
 
     draggedItem.value = null;
 };
-
 
 const handleEdit = (category: Category) => {
     selectedCategory.value = category;
@@ -236,6 +235,14 @@ watch(
         }));
     },
     { deep: true }
+);
+
+watch(
+    () => categoriesStore.categoriesPaginationData,
+    () => {
+        currentPage.value = categoriesStore.categoriesPaginationData.page;
+    },
+    { immediate: true, deep: true }
 );
 </script>
 
