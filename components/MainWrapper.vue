@@ -4,52 +4,67 @@
 
         <section class="categories__list">
             <div class="categories__tbody">
-                <div
-                    v-for="(category, index) in categories"
-                    :key="category.id"
-                    class="category-container"
-                    draggable="true"
-                    @dragstart="onDragStart($event, category.id, 'category')"
-                    @dragover.prevent
-                    @drop="onDrop($event, category.id, 'category')"
-                    :class="{
-                        dragged:
-                            draggedItem?.categoryId === category.id &&
-                            draggedItem.type === 'subcategory',
-                    }"
+                <CommonCardRenderer
+                    no-data-text="Categories not found"
+                    :loading="categoriesStore.loading"
+                    :has-items="categories.length > 0"
+                    class="categories_tbody"
                 >
-                    <CategoryRow
-                        :category="category"
-                        :index="index"
-                        :dragged-item="draggedItem"
-                        @dragstart="onDragStart"
-                        @toggle="toggleSubCategories"
-                        @edit="handleEdit"
-                        @remove="handleRemove"
-                    />
-
-                    <Transition name="slide-fade">
-                        <section
-                            v-if="category.hasOpenedSubCategories"
-                            class="subcategories__list"
+                    <template #items>
+                        <div
+                            v-for="(category, index) in categories"
+                            :key="category.id"
+                            class="category-container"
+                            draggable="true"
+                            @dragstart="
+                                onDragStart($event, category.id, 'category')
+                            "
+                            @dragover.prevent
+                            @drop="onDrop($event, category.id, 'category')"
+                            :class="{
+                                dragged:
+                                    draggedItem?.categoryId === category.id &&
+                                    draggedItem.type === 'subcategory',
+                            }"
                         >
-                            <SubCategoryRow
-                                v-for="(
-                                    sub_category, sub_index
-                                ) in category.sub_categories"
-                                :key="sub_category.id"
-                                :sub-category="sub_category"
-                                :category-id="category.id"
-                                :parent-index="index"
-                                :sub-index="sub_index"
+                            <CategoryRow
+                                :category="category"
+                                :index="index"
+                                :dragged-item="draggedItem"
                                 @dragstart="onDragStart"
-                                @drop="onDrop"
+                                @toggle="toggleSubCategories"
                                 @edit="handleEdit"
                                 @remove="handleRemove"
                             />
-                        </section>
-                    </Transition>
-                </div>
+
+                            <Transition name="slide-fade">
+                                <section
+                                    v-if="category.hasOpenedSubCategories"
+                                    class="subcategories__list"
+                                >
+                                    <SubCategoryRow
+                                        v-for="(
+                                            sub_category, sub_index
+                                        ) in category.sub_categories"
+                                        :key="sub_category.id"
+                                        :sub-category="sub_category"
+                                        :category-id="category.id"
+                                        :parent-index="index"
+                                        :sub-index="sub_index"
+                                        @dragstart.stop="onDragStart"
+                                        @drop.stop="onDrop"
+                                        @edit="handleEdit"
+                                        @remove="handleRemove"
+                                    />
+                                </section>
+                            </Transition>
+                        </div>
+                    </template>
+
+                    <template #loading>
+                        <SkeletonMainWrapper />
+                    </template>
+                </CommonCardRenderer>
             </div>
         </section>
 

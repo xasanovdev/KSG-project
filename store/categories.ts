@@ -153,7 +153,11 @@ export const useCategoriesStore = defineStore('categories', {
             try {
                 await $fetch('/api/categories', {
                     method: 'DELETE',
-                    body: { categoryId, subId, type: subId ? 'subcategory' : 'category' },
+                    body: {
+                        categoryId,
+                        subId,
+                        type: subId ? 'subcategory' : 'category',
+                    },
                 });
 
                 // Refetch categories instead of manually filtering

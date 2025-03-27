@@ -24,12 +24,13 @@ export default defineEventHandler(async (event) => {
         return {
             statusCode: 200,
             statusMessage: 'success',
-            data: categories.map(category => ({
+            data: categories.map((category) => ({
                 ...category,
-                sub_categories: typeof category.sub_categories === "string"
-                  ? JSON.parse(category.sub_categories)
-                  : category.sub_categories
-              })),
+                sub_categories:
+                    typeof category.sub_categories === 'string'
+                        ? JSON.parse(category.sub_categories)
+                        : category.sub_categories,
+            })),
             pagination: {
                 page,
                 limit,

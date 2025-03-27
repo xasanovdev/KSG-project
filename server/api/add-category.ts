@@ -9,17 +9,24 @@ export default defineEventHandler(async (event) => {
     const { category } = body;
 
     if (!category || !category.name) {
-        throw createError({ statusCode: 400, message: 'Category name is required' });
+        throw createError({
+            statusCode: 400,
+            message: 'Category name is required',
+        });
     }
 
     try {
         // Insert new category into Supabase
         const { data, error } = await supabase
             .from('categories')
-            .insert([{
-                ...category,
-                sub_categories: JSON.stringify(category.sub_categories || [])     
-            }])
+            .insert([
+                {
+                    ...category,
+                    sub_categories: JSON.stringify(
+                        category.sub_categories || []
+                    ),
+                },
+            ])
             .select()
             .single();
 
