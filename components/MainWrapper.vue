@@ -85,7 +85,7 @@
 
         <CommonPagination
             v-if="!categoriesStore.loading"
-            :total-pages="categoriesStore.categoriesPaginationData.total"
+            :total-pages="categoriesStore.categoriesPaginationData.totalPages"
             :current-page="currentPage"
             :pagination-list="paginationList"
             @next-page="nextPage"
