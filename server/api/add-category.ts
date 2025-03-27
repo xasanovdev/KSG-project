@@ -1,44 +1,36 @@
-import fs from 'fs';
-import path from 'path';
-import { Category } from '~/types/categories';
-
-const CATEGORIES_FILE = path.resolve('data/categories.json');
-
-const readJsonFile = (filePath: string) => {
-    try {
-        return JSON.parse(fs.readFileSync(filePath, 'utf-8'));
-    } catch (error) {
-        return [];
-    }
-};
-
-const writeJsonFile = (filePath: string, data: any) => {
-    try {
-        fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
-    } catch (error) {
-        console.error(`Error writing to ${filePath}:`, error);
-    }
-};
+import { supabase } from '~/server/utils/supabase';
 
 export default defineEventHandler(async (event) => {
     if (event.method !== 'POST') {
-        throw createError({
-            statusCode: 405,
-            message: 'Method Not Allowed',
-        });
+        throw createError({ statusCode: 405, message: 'Method Not Allowed' });
     }
 
     const body = await readBody(event);
     const { category } = body;
 
-    if (!category) {
-        throw createError({ statusCode: 400, message: 'Category is required' });
+    if (!category || !category.name) {
+        throw createError({ statusCode: 400, message: 'Category name is required' });
     }
 
-    let categories: Category[] = readJsonFile(CATEGORIES_FILE);
+    try {
+        // Insert new category into Supabase
+        const { data, error } = await supabase
+            .from('categories')
+            .insert([{
+                ...category,
+                sub_categories: JSON.stringify(category.sub_categories || [])     
+            }])
+            .select()
+            .single();
 
-    categories.unshift(category);
-    writeJsonFile(CATEGORIES_FILE, categories);
+        if (error) throw error;
 
-    return { success: true, message: 'Category added successfully', category };
+        return {
+            success: true,
+            message: 'Category added successfully',
+            category: data,
+        };
+    } catch (error: any) {
+        throw createError({ statusCode: 500, message: error.message });
+    }
 });

@@ -37,15 +37,15 @@
         </li>
         <li class="categories__row-item">
             <span class="categories__row-head">Order</span>
-            <span class="categories__row-label">{{ subCategory.order }}</span>
+            <span class="categories__row-label">{{ subIndex + 1 }}</span>
         </li>
-        <li class="categories__row-item actions">
+        <!-- <li class="categories__row-item actions">
             <DropDown :actions="dropdownActions">
                 <CommonButton variant="dark-purple" size="sm" square>
                     <LucideEllipsis :size="16" />
                 </CommonButton>
             </DropDown>
-        </li>
+        </li> -->
     </ul>
 </template>
 

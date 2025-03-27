@@ -29,7 +29,7 @@
         </li>
         <li class="categories__row-item">
             <span class="categories__row-head">Order</span>
-            <span class="categories__row-label">{{ category.order }}</span>
+            <span class="categories__row-label">{{ index + 1 }}</span>
         </li>
         <li class="categories__row-item">
             <span class="categories__row-head">Sub categories</span>

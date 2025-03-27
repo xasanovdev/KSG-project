@@ -12,6 +12,7 @@
     "dependencies": {
         "@ivanv/vue-collapse-transition": "^1.0.2",
         "@pinia/nuxt": "0.10.1",
+        "@supabase/supabase-js": "^2.49.3",
         "fs": "^0.0.1-security",
         "nuxt": "^3.16.1",
         "nuxt-lucide-icons": "1.0.5",
