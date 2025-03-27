@@ -3,15 +3,7 @@ export default defineNuxtConfig({
     compatibilityDate: '2024-11-01',
     css: ['~/assets/css/main.css'],
     devtools: { enabled: true },
-    modules: ['nuxt-lucide-icons', '@pinia/nuxt', '@nuxtjs/supabase'],
-    supabase: {
-        redirect: false,
-        redirectOptions: {
-          login: '/login',
-          callback: '/confirm',
-          exclude: ['/']
-        }
-      },
+    modules: ['nuxt-lucide-icons', '@pinia/nuxt'],
     runtimeConfig: {
         public: {
           supabaseUrl: process.env.NUXT_PUBLIC_SUPABASE_URL,
