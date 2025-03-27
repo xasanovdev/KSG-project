@@ -20,9 +20,8 @@ const showModal = ref(false);
 const categoriesStore = useCategoriesStore();
 
 const handleSave = (category: Category) => {
-    categoriesStore.addCategory(category).finally(() => {
-        showModal.value = false;
-    });
+    showModal.value = false;
+    categoriesStore.addCategory(category)
 };
 </script>
 

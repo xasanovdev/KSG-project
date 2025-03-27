@@ -8,7 +8,7 @@
                     no-data-text="Categories not found"
                     :loading="categoriesStore.loading"
                     :has-items="categories.length > 0"
-                    class="categories_tbody"
+                    class="categories__tbody"
                 >
                     <template #items>
                         <div
@@ -212,9 +212,8 @@ const handleEdit = (category: Category) => {
 };
 
 const updateCategory = (category: Category) => {
-    categoriesStore.updateCategory(category.id, category).finally(() => {
-        showEditModal.value = false;
-    });
+    showEditModal.value = false;
+    categoriesStore.updateCategory(category.id, category)
 };
 
 const removeCategory = () => {
@@ -289,6 +288,6 @@ watch(
 .categories__tbody {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 12px;
 }
 </style>

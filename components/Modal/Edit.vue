@@ -12,12 +12,12 @@ interface Emits {
 }
 
 const props = defineProps<Props>();
-defineEmits<Emits>();
+const emits = defineEmits<Emits>();
 
 const showEditModal = defineModel() as Ref<boolean>;
 
 const formData = ref<Category>({
-    id: props.category?.id ?? Date.now(), // Assigns ID for new category
+    id: props.category?.id ?? Date.now(), 
     name: props.category?.name ?? '',
     order: props.category?.order ?? 1,
     sub_categories: props.category?.sub_categories
@@ -40,14 +40,28 @@ const removeSubcategory = (index: number) => {
     formData.value.sub_categories.splice(index, 1);
 };
 
+const save = () => {
+    emits('save', formData.value);
+
+    formData.value = {}
+}
+
 watch(
     () => props.category,
-    () => {
-        formData.value = {
-            ...props.category,
-        };
+    (v) => {
+        if(v) {
+            formData.value = v
+        } else {
+            formData.value = {
+                id: Date.now(),
+                name: '',
+                order: 1,
+                sub_categories: [],
+                hasOpenedSubCategories: false,
+            }
+        }
     },
-    { deep: true }
+    { deep: true, immediate: true }
 );
 </script>
 
@@ -93,7 +107,7 @@ watch(
                 <CommonButton type="primary" @click.stop="$emit('cancel')">
                     Cancel
                 </CommonButton>
-                <CommonButton type="success" @click="$emit('save', formData)">
+                <CommonButton type="success" @click="save">
                     Save
                 </CommonButton>
             </div>

@@ -1,6 +1,6 @@
 <template>
     <Transition name="fade" mode="out-in">
-        <div :key="loading" class="flex flex-col gap-5">
+        <div :key="loading">
             <!-- Loading State -->
             <template v-if="loading">
                 <slot name="loading" />
@@ -14,7 +14,7 @@
             <!-- No Data State -->
             <template v-else>
                 <slot name="no-data">
-                    <div class="text-center text-gray-500">
+                    <div>
                         {{ noDataText }}
                     </div>
                 </slot>
