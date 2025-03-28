@@ -121,7 +121,6 @@ const selectedSubCategoryId = ref<string | null>(null);
 const selectedCategory = ref<Category | null>(null);
 
 const changePage = (page: number) => {
-    console.log(page);
     if (!isNaN(page)) {
         currentPage.value = page;
 
@@ -195,7 +194,6 @@ const onDrop = async (
 
         if (response.success) {
             console.log(response.message);
-            // Optionally refresh data
         }
     } catch (error) {
         console.error('Error reordering:', error);

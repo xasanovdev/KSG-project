@@ -1,10 +1,5 @@
 import { SubCategory } from './../../types/categories';
-import { createClient } from '@supabase/supabase-js';
-
-const supabase = createClient(
-    process.env.SUPABASE_URL!,
-    process.env.SUPABASE_ANON_KEY!
-);
+import { supabase } from '~/server/utils/supabase';
 
 export default defineEventHandler(async (event) => {
     if (event.method !== 'POST') {

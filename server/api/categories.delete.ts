@@ -9,7 +9,6 @@ export default defineEventHandler(async (event) => {
     }
 
     const body = await readBody(event);
-    console.log('Received DELETE request body:', body); // Debugging log
 
     const { subId, type, categoryId } = body;
 
