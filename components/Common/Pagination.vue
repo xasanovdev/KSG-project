@@ -2,7 +2,7 @@
     <section class="pagination__section">
         <p class="pagination__info">
             Showing 10 of
-            {{ totalPages }}
+            {{ totalItems }}
         </p>
         <div class="pagination__body">
             <CommonButton
@@ -38,6 +38,7 @@
 interface Props {
     totalPages: number;
     currentPage: number;
+    totalItems: number;
     paginationList: (string | number)[];
 }
 
