@@ -6,13 +6,13 @@ export default defineNuxtConfig({
     modules: ['nuxt-lucide-icons', '@pinia/nuxt', '@nuxtjs/supabase'],
     runtimeConfig: {
         public: {
-          supabaseUrl: 'https://djebdwdyuvexhfslieuw.supabase.co',
-          supabaseAnonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRqZWJkd2R5dXZleGhmc2xpZXV3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDI4MjA4MzgsImV4cCI6MjA1ODM5NjgzOH0.MmTPDIxaiIebxhCWknr6vlOyhOJhLvITHnUEWjvirkQ'
+          supabaseUrl: process.env.NUXT_PUBLIC_SUPABASE_URL,
+          supabaseAnonKey: process.env.NUXT_PUBLIC_SUPABASE_ANON_KEY
         }
       },
     supabase: {
-        url: 'https://djebdwdyuvexhfslieuw.supabase.co',
-        key: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRqZWJkd2R5dXZleGhmc2xpZXV3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDI4MjA4MzgsImV4cCI6MjA1ODM5NjgzOH0.MmTPDIxaiIebxhCWknr6vlOyhOJhLvITHnUEWjvirkQ',
+        url: process.env.NUXT_PUBLIC_SUPABASE_URL,
+        key: process.env.NUXT_PUBLIC_SUPABASE_ANON_KEY,
         redirect: false
     }
 });
